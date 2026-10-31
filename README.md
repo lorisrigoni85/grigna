@@ -1,6 +1,6 @@
 # Grigna Design System
 
-Sito della documentazione di Grigna, il design system di Loris Rigoni pensato per persone e agenti AI: https://grigna.miracledesign.it
+Sito della documentazione di Grigna, il design system di [Loris Rigoni](https://miracledesign.it), Senior Product Designer, pensato per persone e agenti AI: https://grigna.miracledesign.it
 
 Questo repository contiene solo il sito già generato. Non modificarlo a mano: si rigenera e si pubblica dal progetto del design system.
 

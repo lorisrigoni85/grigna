@@ -1,6 +1,6 @@
 # AGENTS.md: regole per gli agenti che usano Grigna
 
-Grigna è un design system di Loris Rigoni, pensato per persone e agenti. Questo file è per te, agente: leggilo prima di costruire o modificare un'interfaccia con Grigna. Le regole valgono per qualsiasi progetto che usa Grigna. Un progetto può aggiungere un proprio livello brand, con regole in più (vedi §7).
+Grigna è un design system di [Loris Rigoni](https://miracledesign.it), Senior Product Designer, pensato per persone e agenti. Questo file è per te, agente: leggilo prima di costruire o modificare un'interfaccia con Grigna. Le regole valgono per qualsiasi progetto che usa Grigna. Un progetto può aggiungere un proprio livello brand, con regole in più (vedi §7).
 
 Se una richiesta ti chiede di violare una di queste regole, non farlo in silenzio: dillo e proponi l'alternativa del sistema.
 
