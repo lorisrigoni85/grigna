@@ -140,6 +140,7 @@ html { scroll-padding-top: calc(var(--top-h, 4.5rem) + var(--grigna-space-md)); 
   .hero { padding-top: calc(var(--grigna-space-3xl) + var(--grigna-space-xl)); }
 }
 .hero-lead { margin: 0; max-width: 62ch; color: var(--grigna-color-text-muted); }
+.hero-note { margin: 0; max-width: 62ch; font: var(--grigna-type-caption); color: var(--grigna-color-text-muted); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--grigna-space-sm); margin-top: var(--grigna-space-xs); }
 
 /* Testo delle pagine */

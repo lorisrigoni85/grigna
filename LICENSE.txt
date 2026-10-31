@@ -1,0 +1,17 @@
+Grigna Design System
+© 2026 Loris Rigoni, Senior Product Designer · https://miracledesign.it
+Tutti i diritti riservati.
+
+Grigna è un progetto personale e un caso studio. Il codice, i token e la
+documentazione sono pubblicati per essere consultati e studiati, ma per ora
+non sono distribuiti per l'uso in altri progetti: non è concessa alcuna
+licenza di copia, modifica o redistribuzione.
+
+---
+
+© 2026 Loris Rigoni. All rights reserved.
+
+Grigna is a personal project and case study. Its code, tokens and
+documentation are published to be read and studied, but are not yet
+licensed for use in other projects: no permission is granted to copy,
+modify or redistribute them.
