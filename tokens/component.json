@@ -1,0 +1,92 @@
+{
+  "$description": "Grigna, livello 3: token dei componenti. Puntano solo a token semantici, così seguono da soli il tema chiaro o scuro. Un componente usa i suoi token; i token semantici servono per comporre cose nuove.",
+  "component": {
+    "button": {
+      "height":      { "$type": "dimension", "$value": "{semantic.size.touch-target}" },
+      "height-sm":   { "$type": "dimension", "$value": "36px", "$description": "Solo in aree dense su desktop" },
+      "padding-x":   { "$type": "dimension", "$value": "{semantic.space.md}" },
+      "padding-x-sm":{ "$type": "dimension", "$value": "{semantic.space.sm}" },
+      "gap":         { "$type": "dimension", "$value": "{semantic.space.xs}" },
+      "radius":      { "$type": "dimension", "$value": "{semantic.radius.control}" },
+      "font":        { "$type": "typography", "$value": "{semantic.type.body-strong}" },
+      "font-sm":     { "$type": "typography", "$value": "{semantic.type.label}" },
+      "primary": {
+        "$type": "color",
+        "bg":       { "$value": "{semantic.color.accent.default}" },
+        "bg-hover": { "$value": "{semantic.color.accent.hover}" },
+        "text":     { "$value": "{semantic.color.text.on-accent}" }
+      },
+      "secondary": {
+        "$type": "color",
+        "bg":       { "$value": "{semantic.color.surface.raised}" },
+        "bg-hover": { "$value": "{semantic.color.surface.subtle}" },
+        "border":   { "$value": "{semantic.color.border.strong}" },
+        "text":     { "$value": "{semantic.color.text.default}" }
+      },
+      "ghost": {
+        "$type": "color",
+        "bg-hover": { "$value": "{semantic.color.accent.subtle}" },
+        "text":     { "$value": "{semantic.color.accent.text}" }
+      }
+    },
+    "field": {
+      "height":        { "$type": "dimension", "$value": "{semantic.size.touch-target}" },
+      "padding-x":     { "$type": "dimension", "$value": "{semantic.space.sm}" },
+      "radius":        { "$type": "dimension", "$value": "{semantic.radius.control}" },
+      "gap":           { "$type": "dimension", "$value": "{semantic.space.xs}" },
+      "font":          { "$type": "typography", "$value": "{semantic.type.body}" },
+      "label-font":    { "$type": "typography", "$value": "{semantic.type.body-strong}" },
+      "help-font":     { "$type": "typography", "$value": "{semantic.type.caption}" },
+      "bg":            { "$type": "color", "$value": "{semantic.color.surface.raised}" },
+      "border":        { "$type": "color", "$value": "{semantic.color.border.strong}" },
+      "border-focus":  { "$type": "color", "$value": "{semantic.color.focus.ring}" },
+      "border-error":  { "$type": "color", "$value": "{semantic.color.feedback.danger.fill}" },
+      "text":          { "$type": "color", "$value": "{semantic.color.text.default}" },
+      "placeholder":   { "$type": "color", "$value": "{semantic.color.text.muted}" },
+      "help-text":     { "$type": "color", "$value": "{semantic.color.text.muted}" },
+      "error-text":    { "$type": "color", "$value": "{semantic.color.feedback.danger.text}" }
+    },
+    "card": {
+      "bg":           { "$type": "color", "$value": "{semantic.color.surface.raised}" },
+      "border":       { "$type": "color", "$value": "{semantic.color.border.default}" },
+      "radius":       { "$type": "dimension", "$value": "{semantic.radius.card}" },
+      "padding":      { "$type": "dimension", "$value": "{semantic.space.md}" },
+      "gap":          { "$type": "dimension", "$value": "{semantic.space.xs}" },
+      "shadow":       { "$type": "shadow", "$value": "{semantic.elevation.raised}" },
+      "shadow-hover": { "$type": "shadow", "$value": "{semantic.elevation.overlay}", "$description": "Solo per schede cliccabili" }
+    },
+    "badge": {
+      "height":    { "$type": "dimension", "$value": "24px" },
+      "padding-x": { "$type": "dimension", "$value": "{semantic.space.xs}" },
+      "gap":       { "$type": "dimension", "$value": "{semantic.space.2xs}" },
+      "radius":    { "$type": "dimension", "$value": "{semantic.radius.pill}" },
+      "font":      { "$type": "typography", "$value": "{semantic.type.label}" },
+      "neutral": { "$type": "color", "bg": { "$value": "{semantic.color.surface.subtle}" },  "text": { "$value": "{semantic.color.text.muted}" }, "border": { "$value": "{semantic.color.border.default}" } },
+      "accent":  { "$type": "color", "bg": { "$value": "{semantic.color.accent.subtle}" },   "text": { "$value": "{semantic.color.accent.text}" } },
+      "success": { "$type": "color", "bg": { "$value": "{semantic.color.feedback.success.bg}" }, "text": { "$value": "{semantic.color.feedback.success.text}" } },
+      "warning": { "$type": "color", "bg": { "$value": "{semantic.color.feedback.warning.bg}" }, "text": { "$value": "{semantic.color.feedback.warning.text}" } },
+      "danger":  { "$type": "color", "bg": { "$value": "{semantic.color.feedback.danger.bg}" },  "text": { "$value": "{semantic.color.feedback.danger.text}" } },
+      "info":    { "$type": "color", "bg": { "$value": "{semantic.color.feedback.info.bg}" },    "text": { "$value": "{semantic.color.feedback.info.text}" } }
+    },
+    "placeholder": {
+      "$description": "Segnaposto per un dato che non c'è ancora, nei prototipi e negli esempi. Con dati veri un dato mancante non si mostra",
+      "bg":     { "$type": "color", "$value": "{semantic.color.border.default}" },
+      "radius": { "$type": "dimension", "$value": "{semantic.radius.pill}" }
+    },
+    "chip": {
+      "$description": "Filtro attivabile (on/off). Per un'etichetta che non si clicca usa badge",
+      "height":    { "$type": "dimension", "$value": "{semantic.size.touch-target}" },
+      "padding-x": { "$type": "dimension", "$value": "{semantic.space.md}" },
+      "gap":       { "$type": "dimension", "$value": "{semantic.space.xs}" },
+      "radius":    { "$type": "dimension", "$value": "{semantic.radius.pill}" },
+      "font":      { "$type": "typography", "$value": "{semantic.type.label}" },
+      "bg":              { "$type": "color", "$value": "{semantic.color.surface.raised}" },
+      "bg-hover":        { "$type": "color", "$value": "{semantic.color.surface.subtle}" },
+      "border":          { "$type": "color", "$value": "{semantic.color.border.strong}" },
+      "text":            { "$type": "color", "$value": "{semantic.color.text.default}" },
+      "selected-bg":     { "$type": "color", "$value": "{semantic.color.accent.subtle}" },
+      "selected-border": { "$type": "color", "$value": "{semantic.color.accent.default}" },
+      "selected-text":   { "$type": "color", "$value": "{semantic.color.accent.text}" }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# Grigna
+
+> Design system di Loris Rigoni, pensato per persone e agenti AI. Lingua: italiano.
+
+Prima di costruire un'interfaccia con Grigna leggi AGENTS.md. Tutti i token risolti, tema chiaro e scuro: dist/tokens.json. CSS: dist/grigna.css, dist/grigna-components.css. Icone: Lucide 1.57.0.
+
+## Pagine (Markdown)
+
+- [Linee guida di Grigna](docs/README.md)
+- [Principi](docs/principi.md)
+- [AGENTS.md: regole per gli agenti che usano Grigna](AGENTS.md)
+- [Colore](docs/fondamenta/colore.md)
+- [Tipografia](docs/fondamenta/tipografia.md)
+- [Spazi, raggi ed elevazione](docs/fondamenta/spazi-e-forme.md)
+- [Icone](docs/fondamenta/icone.md)
+- [Bottone](docs/componenti/bottone.md)
+- [Campo](docs/componenti/campo.md)
+- [Scheda](docs/componenti/scheda.md)
+- [Badge](docs/componenti/badge.md)
+- [Filtro](docs/componenti/filtro.md)
+- [Segnaposto](docs/componenti/segnaposto.md)
+
+## Dati
+
+- [Token risolti](dist/tokens.json)
+- Token sorgente, formato W3C DTCG: [primitivi](tokens/primitive.json), [semantici](tokens/semantic.json), [tema chiaro](tokens/themes/light.json), [tema scuro](tokens/themes/dark.json), [componenti](tokens/component.json)

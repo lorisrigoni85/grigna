@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Principi · Grigna</title>
+<meta name="description" content="Grigna, design system di Loris Rigoni pensato per persone e agenti AI.">
+<link rel="alternate" type="text/markdown" href="principi.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../dist/grigna.css">
+<link rel="stylesheet" href="../dist/grigna-components.css">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="top">
+  <a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><span class="brand-text"><span class="brand-name">Grigna</span><span class="brand-claim">Design System</span></span></a>
+  <div class="top-actions">
+    <div class="theme" role="group" aria-label="Tema">
+      <button class="grigna-chip" data-set="light">Chiaro</button>
+      <button class="grigna-chip" data-set="dark">Scuro</button>
+      <button class="grigna-chip" data-set="system">Sistema</button>
+    </div>
+    <button class="grigna-chip theme-cycle" id="theme-cycle" aria-label="Cambia tema">Tema: sistema</button>
+  </div>
+</header>
+<div class="layout">
+  <details class="nav" id="nav">
+    <summary><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Indice</summary>
+    <nav aria-label="Indice"><p class="nav-group">Inizia</p><ul><li><a href="../index.html">Home</a></li><li><a href="../docs/principi.html" aria-current="page">Principi</a></li><li><a href="../AGENTS.html">Regole per gli agenti</a></li></ul><p class="nav-group">Fondamenti</p><ul><li><a href="../docs/fondamenta/colore.html">Colore</a></li><li><a href="../docs/fondamenta/tipografia.html">Tipografia</a></li><li><a href="../docs/fondamenta/spazi-e-forme.html">Spazi, raggi ed elevazione</a></li><li><a href="../docs/fondamenta/icone.html">Icone</a></li></ul><p class="nav-group">Componenti</p><ul><li><a href="../docs/componenti/bottone.html">Bottone</a></li><li><a href="../docs/componenti/campo.html">Campo</a></li><li><a href="../docs/componenti/scheda.html">Scheda</a></li><li><a href="../docs/componenti/badge.html">Badge</a></li><li><a href="../docs/componenti/filtro.html">Filtro</a></li><li><a href="../docs/componenti/segnaposto.html">Segnaposto</a></li></ul></nav>
+  </details>
+  <main id="contenuto">
+    <nav class="crumbs" aria-label="Percorso"><ol>
+      <li><a href="../index.html">Grigna</a></li>
+      <li><span aria-current="page"><span class="crumb-group">Inizia</span> - Principi</span></li>
+    </ol></nav>
+    
+    <article class="prose">
+<h1 id="principi">Principi</h1>
+<p>Sei idee guidano Grigna. Quando una regola più specifica non copre un caso, si decide partendo da qui.</p>
+<h2 id="1-il-sistema-è-il-contesto">1. Il sistema è il contesto</h2>
+<p>Un design system ben strutturato è il miglior contesto che un agente possa avere. Per questo ogni scelta è scritta, ha un nome ed è verificabile da uno script, non solo da un occhio esperto. Se una regola non si può controllare, va riscritta finché si può.</p>
+<h2 id="2-pulito-e-luminoso">2. Pulito e luminoso</h2>
+<p>Superfici chiare, molto spazio, un solo colore d'accento. L'interfaccia si fa da parte e lascia la scena ai contenuti: foto, mappe, dati. Ispirazione dichiarata: AllTrails e Komoot, per i principi e non per le forme. Da loro non si copiano colori, logo, icone o componenti.</p>
+<h2 id="3-il-colore-ha-sempre-un-significato">3. Il colore ha sempre un significato</h2>
+<p>Ogni colore ha un compito preciso: l'Abete indica l'azione, i colori di feedback lo stato. Un livello brand può dare a un colore un significato suo, e da quel momento quel colore serve solo a quello. Un colore non si usa per decorare né per distinguere categorie, perché finirebbe per avere due significati.</p>
+<p>E il colore non è mai da solo: va sempre insieme a un testo, un'icona o una forma. Così l'informazione arriva anche a chi non distingue i colori, su uno schermo al sole o in bianco e nero.</p>
+<h2 id="4-accessibile-per-costruzione">4. Accessibile per costruzione</h2>
+<ul><li>Contrasto minimo 4,5:1 per il testo e 3:1 per gli elementi grafici e i bordi dei controlli. Lo controlla la build: se un abbinamento non passa, si ferma.</li><li>Area di tocco minima di 44px per ogni elemento interattivo.</li><li>Testo corrente mai sotto i 16px.</li><li>Focus sempre visibile da tastiera.</li><li>Tema chiaro e scuro con gli stessi nomi di token.</li></ul>
+<h2 id="5-meno-scelte-più-coerenza">5. Meno scelte, più coerenza</h2>
+<p>Pochi token con nomi chiari valgono più di una scala infinita. Si sceglie <code>--grigna-space-md</code>, non &quot;16px&quot; o &quot;15px che sta meglio&quot;. Se manca qualcosa si aggiunge al sistema, non si aggira con un valore scritto a mano.</p>
+<h2 id="6-niente-contenuti-inventati">6. Niente contenuti inventati</h2>
+<p>Esempi, testi di prova e anteprime usano segnaposto chiari: un testo come &quot;Titolo di esempio&quot;, o il <a href="componenti/segnaposto.html">segnaposto</a> per numeri e date. I dati veri arrivano solo da fonti vere. Vale per le persone e soprattutto per gli agenti.</p>
+<p>E in un'interfaccia con dati veri, <strong>un dato che manca non si mostra</strong>: niente trattini, &quot;n.d.&quot; o stime. Si toglie l'elemento.</p>
+<hr>
+<h2 id="per-gli-agenti" class="agent">Per gli agenti</h2>
+<ul><li>Prima di creare un'interfaccia, leggi <a href="../AGENTS.html"><code>AGENTS.md</code></a> e la pagina del componente che stai per usare.</li><li>Se un caso non è coperto da nessuna regola, applica questi principi e <strong>segnala</strong> il caso nella risposta, invece di inventare una soluzione nuova in silenzio.</li></ul>
+    </article>
+    <nav class="pager" aria-label="Pagine vicine"><a class="pager-prev" rel="prev" href="../index.html"><span class="pager-dir"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>Precedente</span><span class="pager-label">Home</span></a><a class="pager-next" rel="next" href="../AGENTS.html"><span class="pager-dir">Successiva<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span><span class="pager-label">Regole per gli agenti</span></a></nav>
+    <footer class="foot">
+      <p>Versione per agenti: <a href="principi.md">principi.md</a> · <a href="../llms.txt">llms.txt</a> · <a href="../dist/tokens.json">tokens.json</a></p>
+      <p>Grigna è un progetto di Loris Rigoni.</p>
+    </footer>
+  </main>
+</div>
+<script>
+  // Indice aperto su schermi larghi, chiuso su telefono
+  const nav = document.getElementById("nav");
+  const wide = matchMedia("(min-width: 768px)");
+  const syncNav = () => { nav.open = wide.matches; };
+  syncNav(); wide.addEventListener("change", syncNav);
+  // Altezza del header fisso, per l'indice e per i link interni
+  const topBar = document.querySelector(".top");
+  const syncTop = () => document.documentElement.style.setProperty("--top-h", topBar.offsetHeight + "px");
+  syncTop(); new ResizeObserver(syncTop).observe(topBar);
+  // Tema: sistema, oppure scelta ricordata in questo browser
+  const LABEL = { system: "sistema", light: "chiaro", dark: "scuro" };
+  let current = "system";
+  function setTheme(mode) {
+    current = mode;
+    document.getElementById("theme-cycle").textContent = "Tema: " + LABEL[mode];
+    if (mode === "system") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", mode);
+    document.querySelectorAll("[data-set]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.set === mode));
+    fillTokens();
+    try { localStorage.setItem("grigna-theme", mode); } catch (e) {}
+  }
+  // Esempi dal vivo: valori dei token per il tema attivo, filtri che si attivano e disattivano
+  function fillTokens() {
+    const css = getComputedStyle(document.documentElement);
+    document.querySelectorAll("[data-token]").forEach((el) => { el.textContent = css.getPropertyValue(el.dataset.token).trim(); });
+  }
+  document.querySelectorAll(".demo .grigna-chip").forEach((c) =>
+    c.addEventListener("click", () => c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") !== "true")));
+  document.querySelectorAll(".demo a[href='#']").forEach((a) => a.addEventListener("click", (ev) => ev.preventDefault()));
+  let saved = "system";
+  try { saved = localStorage.getItem("grigna-theme") || "system"; } catch (e) {}
+  document.querySelectorAll("[data-set]").forEach((b) => b.addEventListener("click", () => setTheme(b.dataset.set)));
+  document.getElementById("theme-cycle").addEventListener("click", () =>
+    setTheme({ system: "light", light: "dark", dark: "system" }[current]));
+  setTheme(saved);
+</script>
+<script src="https://unpkg.com/lucide@1.57.0/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+{
+  "$description": "Grigna, tema scuro. Stessi nomi del tema chiaro: cambiano solo i valori.",
+  "semantic": {
+    "color": {
+      "$type": "color",
+      "surface": {
+        "default": { "$value": "{primitive.color.neutral.950}" },
+        "subtle":  { "$value": "{primitive.color.neutral.900}" },
+        "raised":  { "$value": "{primitive.color.neutral.800}", "$description": "In tema scuro l'elevazione si legge soprattutto dal colore della superficie" },
+        "inverse": { "$value": "{primitive.color.neutral.50}" }
+      },
+      "border": {
+        "default": { "$value": "{primitive.color.neutral.700}" },
+        "strong":  { "$value": "{primitive.color.neutral.500}" }
+      },
+      "text": {
+        "default":   { "$value": "{primitive.color.neutral.50}" },
+        "muted":     { "$value": "{primitive.color.neutral.300}" },
+        "disabled":  { "$value": "{primitive.color.neutral.600}" },
+        "inverse":   { "$value": "{primitive.color.neutral.950}" },
+        "on-accent": { "$value": "{primitive.color.neutral.950}" }
+      },
+      "accent": {
+        "default": { "$value": "{primitive.color.abete.300}" },
+        "hover":   { "$value": "{primitive.color.abete.200}" },
+        "subtle":  { "$value": "{primitive.color.abete.900}" },
+        "text":    { "$value": "{primitive.color.abete.300}" }
+      },
+      "focus": {
+        "ring": { "$value": "{primitive.color.abete.300}" }
+      },
+      "feedback": {
+        "success": {
+          "fill": { "$value": "{primitive.color.green.300}" },
+          "bg":   { "$value": "{primitive.color.green.900}" },
+          "text": { "$value": "{primitive.color.green.300}" }
+        },
+        "warning": {
+          "fill": { "$value": "{primitive.color.yellow.300}" },
+          "bg":   { "$value": "{primitive.color.yellow.900}" },
+          "text": { "$value": "{primitive.color.yellow.300}" }
+        },
+        "danger": {
+          "fill": { "$value": "{primitive.color.red.300}" },
+          "bg":   { "$value": "{primitive.color.red.900}" },
+          "text": { "$value": "{primitive.color.red.300}" }
+        },
+        "info": {
+          "fill": { "$value": "{primitive.color.blue.300}" },
+          "bg":   { "$value": "{primitive.color.blue.900}" },
+          "text": { "$value": "{primitive.color.blue.300}" }
+        }
+      }
+    },
+    "elevation": {
+      "$type": "shadow",
+      "flat":    { "$value": [] },
+      "raised":  { "$value": [
+        { "color": "#00000066", "offsetX": "0px", "offsetY": "1px", "blur": "2px",  "spread": "0px" }
+      ] },
+      "overlay": { "$value": [
+        { "color": "#00000080", "offsetX": "0px", "offsetY": "8px", "blur": "24px", "spread": "0px" }
+      ] }
+    }
+  }
+}

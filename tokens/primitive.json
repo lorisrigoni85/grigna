@@ -1,0 +1,124 @@
+{
+  "$description": "Grigna, livello 1: primitivi. Valori grezzi senza significato. Non usarli direttamente nelle interfacce: passa sempre dai token semantici.",
+  "primitive": {
+    "color": {
+      "$type": "color",
+      "white": { "$value": "#FFFFFF" },
+      "neutral": {
+        "50":  { "$value": "#F7F8F7" },
+        "100": { "$value": "#EEF0EE" },
+        "200": { "$value": "#DDE1DE" },
+        "300": { "$value": "#C3C8C4" },
+        "400": { "$value": "#9AA19C" },
+        "500": { "$value": "#737A75" },
+        "600": { "$value": "#565D58" },
+        "700": { "$value": "#3F4541" },
+        "800": { "$value": "#2A2F2C" },
+        "900": { "$value": "#1B1F1C" },
+        "950": { "$value": "#111412" }
+      },
+      "abete": {
+        "50":  { "$value": "#EEF5F1" },
+        "100": { "$value": "#D5E8DD" },
+        "200": { "$value": "#ABD1BB" },
+        "300": { "$value": "#7DB596" },
+        "400": { "$value": "#4F9472" },
+        "500": { "$value": "#2F6B4F", "$description": "Colore d'accento scelto da Loris" },
+        "600": { "$value": "#275C44" },
+        "700": { "$value": "#1F4A37" },
+        "800": { "$value": "#18392B" },
+        "900": { "$value": "#10271D" }
+      },
+      "green": {
+        "$description": "Verde del successo e delle condizioni ottime: più giallo e brillante, per distinguerlo dall'Abete (scelta di Loris, 30/10/2026)",
+        "50":  { "$value": "#F4F9E6" },
+        "300": { "$value": "#A6D45A" },
+        "500": { "$value": "#5B8A00" },
+        "700": { "$value": "#3F6100" },
+        "900": { "$value": "#22300A" }
+      },
+      "yellow": {
+        "50":  { "$value": "#FDF6E3" },
+        "300": { "$value": "#E9C04A" },
+        "500": { "$value": "#9A7200" },
+        "700": { "$value": "#6E5100" },
+        "900": { "$value": "#3D2D00" }
+      },
+      "orange": {
+        "50":  { "$value": "#FDF1E9" },
+        "300": { "$value": "#EFA06A" },
+        "500": { "$value": "#C65A16" },
+        "700": { "$value": "#8A3D0E" },
+        "900": { "$value": "#4A2408" }
+      },
+      "red": {
+        "50":  { "$value": "#FCEEEE" },
+        "300": { "$value": "#EE9494" },
+        "500": { "$value": "#C62828" },
+        "700": { "$value": "#8E1B1B" },
+        "900": { "$value": "#4A1010" }
+      },
+      "blue": {
+        "50":  { "$value": "#EEF3FA" },
+        "300": { "$value": "#8DAEDD" },
+        "500": { "$value": "#2F5FA8" },
+        "700": { "$value": "#1F4176" },
+        "900": { "$value": "#13284A" }
+      }
+    },
+    "font": {
+      "family": {
+        "$type": "fontFamily",
+        "sans": { "$value": ["Inter", "system-ui", "-apple-system", "Segoe UI", "sans-serif"] }
+      },
+      "size": {
+        "$type": "dimension",
+        "12": { "$value": "12px" },
+        "14": { "$value": "14px" },
+        "16": { "$value": "16px" },
+        "18": { "$value": "18px" },
+        "20": { "$value": "20px" },
+        "24": { "$value": "24px" },
+        "30": { "$value": "30px" },
+        "36": { "$value": "36px" },
+        "48": { "$value": "48px" }
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "regular":  { "$value": 400 },
+        "medium":   { "$value": 500 },
+        "semibold": { "$value": 600 },
+        "bold":     { "$value": 700 }
+      },
+      "line-height": {
+        "$type": "number",
+        "tight":  { "$value": 1.2 },
+        "snug":   { "$value": 1.35 },
+        "normal": { "$value": 1.5 }
+      }
+    },
+    "space": {
+      "$type": "dimension",
+      "0":  { "$value": "0px" },
+      "1":  { "$value": "4px" },
+      "2":  { "$value": "8px" },
+      "3":  { "$value": "12px" },
+      "4":  { "$value": "16px" },
+      "5":  { "$value": "20px" },
+      "6":  { "$value": "24px" },
+      "8":  { "$value": "32px" },
+      "10": { "$value": "40px" },
+      "12": { "$value": "48px" },
+      "16": { "$value": "64px" }
+    },
+    "radius": {
+      "$type": "dimension",
+      "none": { "$value": "0px" },
+      "sm":   { "$value": "4px" },
+      "md":   { "$value": "8px" },
+      "lg":   { "$value": "12px" },
+      "xl":   { "$value": "16px" },
+      "pill": { "$value": "999px" }
+    }
+  }
+}

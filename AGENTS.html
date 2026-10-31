@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AGENTS.md: regole per gli agenti che usano Grigna · Grigna</title>
+<meta name="description" content="Grigna, design system di Loris Rigoni pensato per persone e agenti AI.">
+<link rel="alternate" type="text/markdown" href="AGENTS.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="dist/grigna.css">
+<link rel="stylesheet" href="dist/grigna-components.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="top">
+  <a class="brand" href="index.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><span class="brand-text"><span class="brand-name">Grigna</span><span class="brand-claim">Design System</span></span></a>
+  <div class="top-actions">
+    <div class="theme" role="group" aria-label="Tema">
+      <button class="grigna-chip" data-set="light">Chiaro</button>
+      <button class="grigna-chip" data-set="dark">Scuro</button>
+      <button class="grigna-chip" data-set="system">Sistema</button>
+    </div>
+    <button class="grigna-chip theme-cycle" id="theme-cycle" aria-label="Cambia tema">Tema: sistema</button>
+  </div>
+</header>
+<div class="layout">
+  <details class="nav" id="nav">
+    <summary><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Indice</summary>
+    <nav aria-label="Indice"><p class="nav-group">Inizia</p><ul><li><a href="index.html">Home</a></li><li><a href="docs/principi.html">Principi</a></li><li><a href="AGENTS.html" aria-current="page">Regole per gli agenti</a></li></ul><p class="nav-group">Fondamenti</p><ul><li><a href="docs/fondamenta/colore.html">Colore</a></li><li><a href="docs/fondamenta/tipografia.html">Tipografia</a></li><li><a href="docs/fondamenta/spazi-e-forme.html">Spazi, raggi ed elevazione</a></li><li><a href="docs/fondamenta/icone.html">Icone</a></li></ul><p class="nav-group">Componenti</p><ul><li><a href="docs/componenti/bottone.html">Bottone</a></li><li><a href="docs/componenti/campo.html">Campo</a></li><li><a href="docs/componenti/scheda.html">Scheda</a></li><li><a href="docs/componenti/badge.html">Badge</a></li><li><a href="docs/componenti/filtro.html">Filtro</a></li><li><a href="docs/componenti/segnaposto.html">Segnaposto</a></li></ul></nav>
+  </details>
+  <main id="contenuto">
+    <nav class="crumbs" aria-label="Percorso"><ol>
+      <li><a href="index.html">Grigna</a></li>
+      <li><span aria-current="page"><span class="crumb-group">Inizia</span> - Regole per gli agenti</span></li>
+    </ol></nav>
+    
+    <article class="prose">
+<h1 id="agentsmd-regole-per-gli-agenti-che-usano-grigna">AGENTS.md: regole per gli agenti che usano Grigna</h1>
+<p>Grigna è un design system di Loris Rigoni, pensato per persone e agenti. Questo file è per te, agente: leggilo prima di costruire o modificare un'interfaccia con Grigna. Le regole valgono per qualsiasi progetto che usa Grigna. Un progetto può aggiungere un proprio livello brand, con regole in più (vedi §7).</p>
+<p>Se una richiesta ti chiede di violare una di queste regole, non farlo in silenzio: dillo e proponi l'alternativa del sistema.</p>
+<h2 id="1-prima-di-iniziare">1. Prima di iniziare</h2>
+<p>Leggi, in questo ordine:</p>
+<ol><li>Questo file.</li><li><a href="docs/principi.html"><code>docs/principi.md</code></a>.</li><li>La pagina in <code>docs/</code> di ogni componente che userai. La sezione <strong>Per gli agenti</strong> in fondo è vincolante.</li><li>Per i valori esatti: <a href="dist/tokens.json"><code>dist/tokens.json</code></a>, che contiene tutti i token risolti, tema chiaro e scuro.</li></ol>
+<h2 id="2-come-si-carica-grigna">2. Come si carica Grigna</h2>
+<pre data-lang="html"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/grigna.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/grigna-components.css&quot;&gt;
+&lt;!-- poi i CSS del livello brand, se il progetto ne ha uno --&gt;
+&lt;!-- icone --&gt;
+&lt;script src=&quot;https://unpkg.com/lucide@1.57.0/dist/umd/lucide.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>Il tema segue il sistema operativo. Si forza con <code>data-theme=&quot;dark&quot;</code> o <code>data-theme=&quot;light&quot;</code> su <code>&lt;html&gt;</code>.</p>
+<h2 id="3-cosa-usare-per-cosa">3. Cosa usare per cosa</h2>
+<div class="table"><table><thead><tr><th>Ti serve</th><th>Usa</th><th>Non fare</th></tr></thead><tbody><tr><td>Un'azione</td><td><code>grigna-button</code> (<a href="docs/componenti/bottone.html">docs</a>)</td><td><code>&lt;div&gt;</code> cliccabili, bottoni stilizzati a mano</td></tr><tr><td>Un dato da inserire</td><td><code>grigna-field</code> (<a href="docs/componenti/campo.html">docs</a>)</td><td>Campi senza etichetta visibile</td></tr><tr><td>Un oggetto in una lista</td><td><code>grigna-card</code> (<a href="docs/componenti/scheda.html">docs</a>)</td><td>Schede annidate, più link in una scheda cliccabile</td></tr><tr><td>Uno stato o un'etichetta</td><td><code>grigna-badge</code> (<a href="docs/componenti/badge.html">docs</a>)</td><td>Badge cliccabili o senza testo</td></tr><tr><td>Un filtro on/off</td><td><code>grigna-chip</code> con <code>aria-pressed</code> (<a href="docs/componenti/filtro.html">docs</a>)</td><td>Classi <code>--active</code>/<code>--selected</code></td></tr><tr><td>Un dato di esempio in un prototipo</td><td><code>grigna-placeholder</code> (<a href="docs/componenti/segnaposto.html">docs</a>)</td><td>Numeri inventati, graffe <code>{…}</code> a schermo</td></tr><tr><td>Un colore</td><td><code>var(--grigna-color-*)</code> (<a href="docs/fondamenta/colore.html">docs</a>)</td><td><code>#hex</code>, <code>rgb()</code>, <code>hsl()</code>, nomi di colore</td></tr><tr><td>Un carattere</td><td><code>font: var(--grigna-type-*)</code> (<a href="docs/fondamenta/tipografia.html">docs</a>)</td><td><code>font-size</code>/<code>font-weight</code> a mano, altri font</td></tr><tr><td>Uno spazio</td><td><code>var(--grigna-space-*)</code> (<a href="docs/fondamenta/spazi-e-forme.html">docs</a>)</td><td>Valori in px scritti a mano</td></tr><tr><td>Un angolo, un'ombra</td><td><code>var(--grigna-radius-*)</code>, <code>var(--grigna-elevation-*)</code></td><td>Raggi e ombre inventati</td></tr><tr><td>Un'icona</td><td>Lucide 1.57.0, o un'icona di Grigna in <code>icons/</code> (<a href="docs/fondamenta/icone.html">docs</a>)</td><td>Altre librerie, emoji, SVG disegnati sul momento, proposte in <code>archivio/</code></td></tr></tbody></table></div>
+<p>Per un layout nuovo componi con i token semantici (<code>--grigna-color-*</code>, <code>--grigna-space-*</code>, <code>--grigna-type-*</code>…). I token dei componenti (<code>--grigna-button-*</code>…) si usano solo dentro quel componente.</p>
+<h2 id="4-regole-doro">4. Regole d'oro</h2>
+<p><strong>Sempre</strong></p>
+<ul><li>Usa i componenti di Grigna prima di scrivere CSS tuo. Il CSS tuo serve solo per il layout (griglie, colonne, posizionamento) e usa solo token.</li><li>Un solo <code>grigna-button--primary</code> per vista.</li><li>Accompagna ogni colore che porta un significato con un testo, un'icona o una forma.</li><li>Elementi interattivi alti almeno <code>--grigna-size-touch-target</code> (44px), testo corrente mai sotto i 16px, focus visibile.</li><li>HTML semantico: <code>&lt;button&gt;</code> per le azioni, <code>&lt;a&gt;</code> per la navigazione, <code>&lt;label&gt;</code> collegata a ogni campo, <code>alt</code> su ogni immagine.</li></ul>
+<p><strong>Mai</strong></p>
+<ul><li>Mai valori scritti a mano per colori, font, spazi, raggi e ombre. Se manca un token, fermati e segnalalo (vedi §6).</li><li>Mai modificare o sovrascrivere le classi dei componenti di Grigna per cambiarne l'aspetto.</li><li>Mai inventare token, classi, varianti o nomi di icone. Se non sei sicuro che esistano, controlla <code>dist/tokens.json</code>, <code>dist/*-components.css</code> o la libreria Lucide 1.57.0.</li><li>Mai usare un colore per decorare o per distinguere categorie.</li></ul>
+<h2 id="5-contenuti-niente-di-inventato">5. Contenuti: niente di inventato</h2>
+<ul><li>Testi, numeri, nomi, luoghi, date e foto arrivano da fonti vere. Non inventarli, nemmeno &quot;come esempio realistico&quot;.</li><li>Dove i dati non ci sono (prototipi, esempi), usa segnaposto evidenti: un testo come &quot;Nome della gita&quot; per i nomi, il componente <code>grigna-placeholder</code> (<a href="docs/componenti/segnaposto.html">docs</a>) per numeri, date e misure. Dichiara nella risposta che sono segnaposto.</li><li>Le graffe degli esempi di codice (<code>{distanza}</code>) non si mostrano mai a schermo.</li><li>In un'interfaccia con dati veri, <strong>un dato che manca non si mostra</strong>: niente trattini, &quot;n.d.&quot; o stime.</li><li>Testi dell'interfaccia in italiano semplice, frasi brevi, maiuscola solo a inizio frase, bottoni che iniziano con un verbo.</li></ul>
+<h2 id="6-quando-il-sistema-non-basta">6. Quando il sistema non basta</h2>
+<p>Se ti serve qualcosa che Grigna non ha (un componente, un token, una variante, un'icona):</p>
+<ol><li><strong>Non improvvisare</strong> una soluzione con valori scritti a mano.</li><li>Usa la soluzione più vicina che il sistema offre.</li><li><strong>Dichiaralo nella risposta</strong>: cosa mancava, cosa hai usato al suo posto e cosa proponi di aggiungere a Grigna.</li></ol>
+<p>Le aggiunte al sistema le decide Loris.</p>
+<h2 id="7-livelli-brand">7. Livelli brand</h2>
+<p>Un progetto può aggiungere a Grigna un proprio livello: token, componenti, icone e linee guida suoi, con un prefisso suo (per esempio <code>--&lt;brand&gt;-*</code> e <code>.&lt;brand&gt;-*</code>). Se il progetto su cui lavori ne ha uno:</p>
+<ul><li>Leggi le sue docs (<code>docs/&lt;nome del livello&gt;/</code>) prima di costruire. Le sue regole si aggiungono a queste, non le sostituiscono.</li><li>Usa prima i suoi componenti, poi quelli di Grigna.</li><li>Un colore a cui il livello dà un significato serve solo a quello.</li><li>Un livello brand non cambia mai i token di Grigna.</li></ul>
+<h2 id="8-controlla-il-tuo-lavoro-prima-di-consegnare">8. Controlla il tuo lavoro prima di consegnare</h2>
+<pre data-lang="bash"><code>node scripts/check-page.mjs percorso/della/pagina.html</code></pre>
+<p>Lo script controlla colori scritti a mano, token e classi inesistenti, misure di layout e graffe a schermo, valori non ammessi dei livelli brand, più di un bottone primario. Correggi tutti gli <strong>errori</strong>. Gli <strong>avvisi</strong> vanno corretti o motivati nella risposta.</p>
+<p>Poi verifica a occhio, o con uno screenshot se puoi, la pagina in tema chiaro e scuro e a larghezza telefono.</p>
+<h2 id="9-se-modifichi-grigna-stesso">9. Se modifichi Grigna stesso</h2>
+<p>Vale solo quando ti è chiesto di cambiare il sistema, non quando lo usi.</p>
+<ul><li>Le fonti sono <code>tokens/*.json</code> (formato W3C DTCG) e <code>components/**/*.css</code>. <strong>Non modificare mai <code>dist/</code></strong>: si rigenera.</li><li>Dopo ogni modifica lancia <code>node scripts/build-tokens.mjs</code>. Deve finire senza errori di contrasto o colori scritti a mano.</li><li>Aggiorna la pagina in <code>docs/</code> e l'anteprima in <code>preview/</code> del componente che hai cambiato.</li><li>Le scelte di brand (colori, caratteri, nomi) le fa Loris: proponi, non decidere.</li><li>Nessun commit senza l'ok di Loris, e niente pubblicazioni.</li></ul>
+    </article>
+    <nav class="pager" aria-label="Pagine vicine"><a class="pager-prev" rel="prev" href="docs/principi.html"><span class="pager-dir"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>Precedente</span><span class="pager-label">Principi</span></a><a class="pager-next" rel="next" href="docs/fondamenta/colore.html"><span class="pager-dir">Successiva<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span><span class="pager-label">Colore</span></a></nav>
+    <footer class="foot">
+      <p>Versione per agenti: <a href="AGENTS.md">AGENTS.md</a> · <a href="llms.txt">llms.txt</a> · <a href="dist/tokens.json">tokens.json</a></p>
+      <p>Grigna è un progetto di Loris Rigoni.</p>
+    </footer>
+  </main>
+</div>
+<script>
+  // Indice aperto su schermi larghi, chiuso su telefono
+  const nav = document.getElementById("nav");
+  const wide = matchMedia("(min-width: 768px)");
+  const syncNav = () => { nav.open = wide.matches; };
+  syncNav(); wide.addEventListener("change", syncNav);
+  // Altezza del header fisso, per l'indice e per i link interni
+  const topBar = document.querySelector(".top");
+  const syncTop = () => document.documentElement.style.setProperty("--top-h", topBar.offsetHeight + "px");
+  syncTop(); new ResizeObserver(syncTop).observe(topBar);
+  // Tema: sistema, oppure scelta ricordata in questo browser
+  const LABEL = { system: "sistema", light: "chiaro", dark: "scuro" };
+  let current = "system";
+  function setTheme(mode) {
+    current = mode;
+    document.getElementById("theme-cycle").textContent = "Tema: " + LABEL[mode];
+    if (mode === "system") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", mode);
+    document.querySelectorAll("[data-set]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.set === mode));
+    fillTokens();
+    try { localStorage.setItem("grigna-theme", mode); } catch (e) {}
+  }
+  // Esempi dal vivo: valori dei token per il tema attivo, filtri che si attivano e disattivano
+  function fillTokens() {
+    const css = getComputedStyle(document.documentElement);
+    document.querySelectorAll("[data-token]").forEach((el) => { el.textContent = css.getPropertyValue(el.dataset.token).trim(); });
+  }
+  document.querySelectorAll(".demo .grigna-chip").forEach((c) =>
+    c.addEventListener("click", () => c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") !== "true")));
+  document.querySelectorAll(".demo a[href='#']").forEach((a) => a.addEventListener("click", (ev) => ev.preventDefault()));
+  let saved = "system";
+  try { saved = localStorage.getItem("grigna-theme") || "system"; } catch (e) {}
+  document.querySelectorAll("[data-set]").forEach((b) => b.addEventListener("click", () => setTheme(b.dataset.set)));
+  document.getElementById("theme-cycle").addEventListener("click", () =>
+    setTheme({ system: "light", light: "dark", dark: "system" }[current]));
+  setTheme(saved);
+</script>
+<script src="https://unpkg.com/lucide@1.57.0/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

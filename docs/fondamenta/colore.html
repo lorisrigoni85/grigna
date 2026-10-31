@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colore · Grigna</title>
+<meta name="description" content="Grigna, design system di Loris Rigoni pensato per persone e agenti AI.">
+<link rel="alternate" type="text/markdown" href="colore.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../dist/grigna.css">
+<link rel="stylesheet" href="../../dist/grigna-components.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="top">
+  <a class="brand" href="../../index.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><span class="brand-text"><span class="brand-name">Grigna</span><span class="brand-claim">Design System</span></span></a>
+  <div class="top-actions">
+    <div class="theme" role="group" aria-label="Tema">
+      <button class="grigna-chip" data-set="light">Chiaro</button>
+      <button class="grigna-chip" data-set="dark">Scuro</button>
+      <button class="grigna-chip" data-set="system">Sistema</button>
+    </div>
+    <button class="grigna-chip theme-cycle" id="theme-cycle" aria-label="Cambia tema">Tema: sistema</button>
+  </div>
+</header>
+<div class="layout">
+  <details class="nav" id="nav">
+    <summary><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Indice</summary>
+    <nav aria-label="Indice"><p class="nav-group">Inizia</p><ul><li><a href="../../index.html">Home</a></li><li><a href="../../docs/principi.html">Principi</a></li><li><a href="../../AGENTS.html">Regole per gli agenti</a></li></ul><p class="nav-group">Fondamenti</p><ul><li><a href="../../docs/fondamenta/colore.html" aria-current="page">Colore</a></li><li><a href="../../docs/fondamenta/tipografia.html">Tipografia</a></li><li><a href="../../docs/fondamenta/spazi-e-forme.html">Spazi, raggi ed elevazione</a></li><li><a href="../../docs/fondamenta/icone.html">Icone</a></li></ul><p class="nav-group">Componenti</p><ul><li><a href="../../docs/componenti/bottone.html">Bottone</a></li><li><a href="../../docs/componenti/campo.html">Campo</a></li><li><a href="../../docs/componenti/scheda.html">Scheda</a></li><li><a href="../../docs/componenti/badge.html">Badge</a></li><li><a href="../../docs/componenti/filtro.html">Filtro</a></li><li><a href="../../docs/componenti/segnaposto.html">Segnaposto</a></li></ul></nav>
+  </details>
+  <main id="contenuto">
+    <nav class="crumbs" aria-label="Percorso"><ol>
+      <li><a href="../../index.html">Grigna</a></li>
+      <li><span aria-current="page"><span class="crumb-group">Fondamenti</span> - Colore</span></li>
+    </ol></nav>
+    
+    <article class="prose">
+<h1 id="colore">Colore</h1>
+<div class="demo" role="group" aria-label="Esempio dal vivo">
+<div class="demo-stack">
+<span class="demo-label">Superfici · valori del tema attivo</span>
+<div class="demo-grid">
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-surface-default)"></span><code>surface-default</code><span class="demo-label" data-token="--grigna-color-surface-default"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-surface-subtle)"></span><code>surface-subtle</code><span class="demo-label" data-token="--grigna-color-surface-subtle"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-surface-raised)"></span><code>surface-raised</code><span class="demo-label" data-token="--grigna-color-surface-raised"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-surface-inverse)"></span><code>surface-inverse</code><span class="demo-label" data-token="--grigna-color-surface-inverse"></span></div>
+</div>
+<span class="demo-label">Bordi · valori del tema attivo</span>
+<div class="demo-grid">
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-border-default)"></span><code>border-default</code><span class="demo-label" data-token="--grigna-color-border-default"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-border-strong)"></span><code>border-strong</code><span class="demo-label" data-token="--grigna-color-border-strong"></span></div>
+</div>
+<span class="demo-label">Testo · valori del tema attivo</span>
+<div class="demo-grid">
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-text-default)"></span><code>text-default</code><span class="demo-label" data-token="--grigna-color-text-default"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-text-muted)"></span><code>text-muted</code><span class="demo-label" data-token="--grigna-color-text-muted"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-text-disabled)"></span><code>text-disabled</code><span class="demo-label" data-token="--grigna-color-text-disabled"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-text-inverse)"></span><code>text-inverse</code><span class="demo-label" data-token="--grigna-color-text-inverse"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-text-on-accent)"></span><code>text-on-accent</code><span class="demo-label" data-token="--grigna-color-text-on-accent"></span></div>
+</div>
+<span class="demo-label">Accento · valori del tema attivo</span>
+<div class="demo-grid">
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-accent-default)"></span><code>accent-default</code><span class="demo-label" data-token="--grigna-color-accent-default"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-accent-hover)"></span><code>accent-hover</code><span class="demo-label" data-token="--grigna-color-accent-hover"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-accent-subtle)"></span><code>accent-subtle</code><span class="demo-label" data-token="--grigna-color-accent-subtle"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-accent-text)"></span><code>accent-text</code><span class="demo-label" data-token="--grigna-color-accent-text"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-focus-ring)"></span><code>focus-ring</code><span class="demo-label" data-token="--grigna-color-focus-ring"></span></div>
+</div>
+<span class="demo-label">Feedback · valori del tema attivo</span>
+<div class="demo-grid">
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-feedback-success-fill)"></span><code>feedback-success-fill</code><span class="demo-label" data-token="--grigna-color-feedback-success-fill"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-feedback-warning-fill)"></span><code>feedback-warning-fill</code><span class="demo-label" data-token="--grigna-color-feedback-warning-fill"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-feedback-danger-fill)"></span><code>feedback-danger-fill</code><span class="demo-label" data-token="--grigna-color-feedback-danger-fill"></span></div>
+<div class="swatch"><span class="swatch-chip" style="background: var(--grigna-color-feedback-info-fill)"></span><code>feedback-info-fill</code><span class="demo-label" data-token="--grigna-color-feedback-info-fill"></span></div>
+</div>
+</div>
+</div>
+<p>Grigna ha un solo colore d'accento, l'<strong>Abete</strong>, una base di grigi neutri e quattro colori di feedback. Ogni colore ha un compito, e lo stesso nome vale nel tema chiaro e in quello scuro.</p>
+<p>L'esempio qui sopra mostra i valori del tema attivo: cambia tema in alto per vedere l'altro. Tutti i valori, chiaro e scuro, stanno in <a href="../../dist/tokens.json"><code>dist/tokens.json</code></a>. Qui sotto ci sono i nomi e il loro uso: i nomi non cambiano, i valori sì.</p>
+<h2 id="come-sono-organizzati">Come sono organizzati</h2>
+<div class="table"><table><thead><tr><th>Livello</th><th>Esempio</th><th>Si usa?</th></tr></thead><tbody><tr><td>Primitivi</td><td><code>primitive.color.abete.500</code></td><td><strong>No.</strong> Sono la tavolozza grezza, non hanno significato</td></tr><tr><td>Semantici</td><td><code>--grigna-color-accent-default</code></td><td><strong>Sì.</strong> Per comporre interfacce nuove</td></tr><tr><td>Componenti</td><td><code>--grigna-button-primary-bg</code></td><td><strong>Sì</strong>, ma solo dentro quel componente</td></tr></tbody></table></div>
+<p>I primitivi non esistono come variabili CSS, proprio perché nessuno li usi per sbaglio.</p>
+<h2 id="token-semantici">Token semantici</h2>
+<h3 id="superfici">Superfici</h3>
+<div class="table"><table><thead><tr><th>Token</th><th>Uso</th></tr></thead><tbody><tr><td><code>--grigna-color-surface-default</code></td><td>Sfondo della pagina</td></tr><tr><td><code>--grigna-color-surface-subtle</code></td><td>Sezioni e zone di raggruppamento, segnaposto delle immagini</td></tr><tr><td><code>--grigna-color-surface-raised</code></td><td>Schede e pannelli, sempre insieme a un'elevazione</td></tr><tr><td><code>--grigna-color-surface-inverse</code></td><td>Superfici in contrasto con il tema: tooltip, toast</td></tr></tbody></table></div>
+<h3 id="bordi">Bordi</h3>
+<div class="table"><table><thead><tr><th>Token</th><th>Uso</th></tr></thead><tbody><tr><td><code>--grigna-color-border-default</code></td><td>Divisori e bordi decorativi</td></tr><tr><td><code>--grigna-color-border-strong</code></td><td>Bordi che definiscono un controllo (campi, filtri, bottone secondario). Contrasto almeno 3:1</td></tr></tbody></table></div>
+<h3 id="testo">Testo</h3>
+<div class="table"><table><thead><tr><th>Token</th><th>Uso</th></tr></thead><tbody><tr><td><code>--grigna-color-text-default</code></td><td>Testo principale</td></tr><tr><td><code>--grigna-color-text-muted</code></td><td>Testo secondario, metadati, segnaposto nei campi</td></tr><tr><td><code>--grigna-color-text-disabled</code></td><td>Solo per elementi disattivati</td></tr><tr><td><code>--grigna-color-text-inverse</code></td><td>Testo su <code>surface-inverse</code></td></tr><tr><td><code>--grigna-color-text-on-accent</code></td><td>Testo su <code>accent-default</code></td></tr></tbody></table></div>
+<h3 id="accento-abete">Accento (Abete)</h3>
+<div class="table"><table><thead><tr><th>Token</th><th>Uso</th></tr></thead><tbody><tr><td><code>--grigna-color-accent-default</code></td><td>Azione principale. Al massimo un bottone primario per vista</td></tr><tr><td><code>--grigna-color-accent-hover</code></td><td>Stato hover dell'accento</td></tr><tr><td><code>--grigna-color-accent-subtle</code></td><td>Sfondo tenue per elementi selezionati</td></tr><tr><td><code>--grigna-color-accent-text</code></td><td>Link e testo d'accento</td></tr><tr><td><code>--grigna-color-focus-ring</code></td><td>Anello del focus da tastiera</td></tr></tbody></table></div>
+<h3 id="feedback">Feedback</h3>
+<p>Quattro famiglie: <code>success</code>, <code>warning</code>, <code>danger</code>, <code>info</code>. Ognuna ha tre token:</p>
+<div class="table"><table><thead><tr><th>Token</th><th>Uso</th></tr></thead><tbody><tr><td><code>--grigna-color-feedback-{stato}-fill</code></td><td>Icone e indicatori pieni. Contrasto 3:1 sulla pagina</td></tr><tr><td><code>--grigna-color-feedback-{stato}-bg</code></td><td>Sfondo tenue di badge e messaggi</td></tr><tr><td><code>--grigna-color-feedback-{stato}-text</code></td><td>Testo sopra il <code>bg</code> della stessa famiglia</td></tr></tbody></table></div>
+<p>Il verde del successo è volutamente più giallo e brillante dell'Abete, così un messaggio &quot;fatto&quot; non si confonde con un bottone.</p>
+<h2 id="regole">Regole</h2>
+<ul><li><strong>Un solo accento per vista.</strong> L'Abete attira l'occhio: se ce ne sono tre, non ne attira nessuno.</li><li><strong>Il colore non è mai da solo.</strong> Uno stato si legge sempre anche dal testo, da un'icona o da una forma.</li><li><strong>Testo colorato solo sul suo sfondo.</strong> <code>feedback-danger-text</code> va su <code>feedback-danger-bg</code> o su una superficie, mai su un altro colore.</li><li><strong>I colori non distinguono categorie.</strong> Categorie come tipi di attività o di contenuto si distinguono con icona ed etichetta in neutro.</li></ul>
+<h2 id="tema-scuro">Tema scuro</h2>
+<p>Il tema scuro usa gli stessi nomi. Si attiva in due modi:</p>
+<ul><li>da solo, se il sistema operativo è in modalità scura;</li><li>forzandolo con <code>data-theme=&quot;dark&quot;</code> su <code>&lt;html&gt;</code>. <code>data-theme=&quot;light&quot;</code> forza invece il chiaro.</li></ul>
+<p>Nel tema scuro l'elevazione si legge soprattutto dal colore della superficie: <code>surface-raised</code> è più chiara della pagina.</p>
+<h2 id="controlli-automatici">Controlli automatici</h2>
+<p><code>node scripts/build-tokens.mjs</code> verifica 47 abbinamenti per tema: testo su superfici, testo sull'accento, testo di feedback sul suo sfondo, bordi dei controlli, focus e colori dei livelli brand. Se uno è sotto la soglia WCAG, la build si ferma e dice quale.</p>
+<hr>
+<h2 id="per-gli-agenti" class="agent">Per gli agenti</h2>
+<p><strong>Sempre</strong></p>
+<ul><li>Usa solo variabili <code>--grigna-color-*</code> (o i token del componente che stai usando).</li><li>Testo su <code>accent-default</code>: <code>--grigna-color-text-on-accent</code>.</li><li>Accompagna ogni colore di stato con un testo o un'icona.</li></ul>
+<p><strong>Mai</strong></p>
+<ul><li>Mai scrivere colori a mano (<code>#…</code>, <code>rgb()</code>, <code>hsl()</code>, nomi come <code>green</code>). La build lo rifiuta nei componenti.</li><li>Mai usare i primitivi (<code>abete.500</code>, <code>neutral.200</code>…): non sono variabili CSS.</li><li>Mai usare l'accento o un colore di feedback per decorare o per distinguere categorie.</li><li>Mai più di un elemento con <code>accent-default</code> pieno nella stessa vista.</li><li>Mai <code>opacity</code> sul testo per renderlo più tenue: usa <code>--grigna-color-text-muted</code>.</li></ul>
+    </article>
+    <nav class="pager" aria-label="Pagine vicine"><a class="pager-prev" rel="prev" href="../../AGENTS.html"><span class="pager-dir"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>Precedente</span><span class="pager-label">Regole per gli agenti</span></a><a class="pager-next" rel="next" href="../../docs/fondamenta/tipografia.html"><span class="pager-dir">Successiva<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span><span class="pager-label">Tipografia</span></a></nav>
+    <footer class="foot">
+      <p>Versione per agenti: <a href="colore.md">colore.md</a> · <a href="../../llms.txt">llms.txt</a> · <a href="../../dist/tokens.json">tokens.json</a></p>
+      <p>Grigna è un progetto di Loris Rigoni.</p>
+    </footer>
+  </main>
+</div>
+<script>
+  // Indice aperto su schermi larghi, chiuso su telefono
+  const nav = document.getElementById("nav");
+  const wide = matchMedia("(min-width: 768px)");
+  const syncNav = () => { nav.open = wide.matches; };
+  syncNav(); wide.addEventListener("change", syncNav);
+  // Altezza del header fisso, per l'indice e per i link interni
+  const topBar = document.querySelector(".top");
+  const syncTop = () => document.documentElement.style.setProperty("--top-h", topBar.offsetHeight + "px");
+  syncTop(); new ResizeObserver(syncTop).observe(topBar);
+  // Tema: sistema, oppure scelta ricordata in questo browser
+  const LABEL = { system: "sistema", light: "chiaro", dark: "scuro" };
+  let current = "system";
+  function setTheme(mode) {
+    current = mode;
+    document.getElementById("theme-cycle").textContent = "Tema: " + LABEL[mode];
+    if (mode === "system") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", mode);
+    document.querySelectorAll("[data-set]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.set === mode));
+    fillTokens();
+    try { localStorage.setItem("grigna-theme", mode); } catch (e) {}
+  }
+  // Esempi dal vivo: valori dei token per il tema attivo, filtri che si attivano e disattivano
+  function fillTokens() {
+    const css = getComputedStyle(document.documentElement);
+    document.querySelectorAll("[data-token]").forEach((el) => { el.textContent = css.getPropertyValue(el.dataset.token).trim(); });
+  }
+  document.querySelectorAll(".demo .grigna-chip").forEach((c) =>
+    c.addEventListener("click", () => c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") !== "true")));
+  document.querySelectorAll(".demo a[href='#']").forEach((a) => a.addEventListener("click", (ev) => ev.preventDefault()));
+  let saved = "system";
+  try { saved = localStorage.getItem("grigna-theme") || "system"; } catch (e) {}
+  document.querySelectorAll("[data-set]").forEach((b) => b.addEventListener("click", () => setTheme(b.dataset.set)));
+  document.getElementById("theme-cycle").addEventListener("click", () =>
+    setTheme({ system: "light", light: "dark", dark: "system" }[current]));
+  setTheme(saved);
+</script>
+<script src="https://unpkg.com/lucide@1.57.0/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

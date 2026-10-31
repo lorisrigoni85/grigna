@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bottone · Grigna</title>
+<meta name="description" content="Grigna, design system di Loris Rigoni pensato per persone e agenti AI.">
+<link rel="alternate" type="text/markdown" href="bottone.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../dist/grigna.css">
+<link rel="stylesheet" href="../../dist/grigna-components.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="top">
+  <a class="brand" href="../../index.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><span class="brand-text"><span class="brand-name">Grigna</span><span class="brand-claim">Design System</span></span></a>
+  <div class="top-actions">
+    <div class="theme" role="group" aria-label="Tema">
+      <button class="grigna-chip" data-set="light">Chiaro</button>
+      <button class="grigna-chip" data-set="dark">Scuro</button>
+      <button class="grigna-chip" data-set="system">Sistema</button>
+    </div>
+    <button class="grigna-chip theme-cycle" id="theme-cycle" aria-label="Cambia tema">Tema: sistema</button>
+  </div>
+</header>
+<div class="layout">
+  <details class="nav" id="nav">
+    <summary><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Indice</summary>
+    <nav aria-label="Indice"><p class="nav-group">Inizia</p><ul><li><a href="../../index.html">Home</a></li><li><a href="../../docs/principi.html">Principi</a></li><li><a href="../../AGENTS.html">Regole per gli agenti</a></li></ul><p class="nav-group">Fondamenti</p><ul><li><a href="../../docs/fondamenta/colore.html">Colore</a></li><li><a href="../../docs/fondamenta/tipografia.html">Tipografia</a></li><li><a href="../../docs/fondamenta/spazi-e-forme.html">Spazi, raggi ed elevazione</a></li><li><a href="../../docs/fondamenta/icone.html">Icone</a></li></ul><p class="nav-group">Componenti</p><ul><li><a href="../../docs/componenti/bottone.html" aria-current="page">Bottone</a></li><li><a href="../../docs/componenti/campo.html">Campo</a></li><li><a href="../../docs/componenti/scheda.html">Scheda</a></li><li><a href="../../docs/componenti/badge.html">Badge</a></li><li><a href="../../docs/componenti/filtro.html">Filtro</a></li><li><a href="../../docs/componenti/segnaposto.html">Segnaposto</a></li></ul></nav>
+  </details>
+  <main id="contenuto">
+    <nav class="crumbs" aria-label="Percorso"><ol>
+      <li><a href="../../index.html">Grigna</a></li>
+      <li><span aria-current="page"><span class="crumb-group">Componenti</span> - Bottone</span></li>
+    </ol></nav>
+    
+    <article class="prose">
+<h1 id="bottone">Bottone</h1>
+<div class="demo" role="group" aria-label="Esempio dal vivo">
+<button class="grigna-button grigna-button--primary"><i data-lucide="plus" aria-hidden="true"></i>Nuova uscita</button>
+<button class="grigna-button">Salva bozza</button>
+<button class="grigna-button grigna-button--ghost">Annulla</button>
+<button class="grigna-button grigna-button--sm">Piccolo</button>
+<button class="grigna-button" disabled>Disattivato</button>
+</div>
+<h2 id="cosè">Cos'è</h2>
+<p>Un elemento che avvia un'azione: salvare, inviare, aprire, annullare.</p>
+<h2 id="quando-usarlo">Quando usarlo</h2>
+<ul><li>Per un'azione che cambia qualcosa o apre un passaggio successivo.</li></ul>
+<h2 id="quando-non-usarlo">Quando non usarlo</h2>
+<ul><li>Per andare a un'altra pagina: usa un link (<code>&lt;a&gt;</code>). Se deve <em>sembrare</em> un bottone, il link può avere le classi del bottone.</li><li>Per attivare o disattivare un filtro: usa il <a href="filtro.html">filtro</a>.</li></ul>
+<h2 id="codice">Codice</h2>
+<pre data-lang="html"><code>&lt;button class=&quot;grigna-button grigna-button--primary&quot;&gt;Pubblica uscita&lt;/button&gt;
+&lt;button class=&quot;grigna-button&quot;&gt;Salva bozza&lt;/button&gt;
+&lt;button class=&quot;grigna-button grigna-button--ghost&quot;&gt;Annulla&lt;/button&gt;</code></pre>
+<p>Con icona (Lucide, prima del testo):</p>
+<pre data-lang="html"><code>&lt;button class=&quot;grigna-button grigna-button--primary&quot;&gt;
+  &lt;i data-lucide=&quot;plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Nuova uscita
+&lt;/button&gt;</code></pre>
+<p>Solo icona:</p>
+<pre data-lang="html"><code>&lt;button class=&quot;grigna-button grigna-button--ghost&quot; aria-label=&quot;Chiudi&quot;&gt;
+  &lt;i data-lucide=&quot;x&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
+<h2 id="varianti-e-stati">Varianti e stati</h2>
+<div class="table"><table><thead><tr><th>Classe</th><th>Uso</th></tr></thead><tbody><tr><td><code>grigna-button--primary</code></td><td>L'azione principale della vista. <strong>Al massimo una per vista</strong></td></tr><tr><td><em>(nessuna)</em></td><td>Secondario: la scelta di default per tutte le altre azioni</td></tr><tr><td><code>grigna-button--ghost</code></td><td>Azioni minori o di rinuncia: annulla, chiudi</td></tr><tr><td><code>grigna-button--sm</code></td><td>Più basso (36px). Solo in aree dense su desktop, mai come azione principale su mobile</td></tr></tbody></table></div>
+<p>Stati: hover, focus da tastiera (anello Abete) e disattivato (<code>disabled</code> o <code>aria-disabled=&quot;true&quot;</code>).</p>
+<p><strong>Sul disattivato:</strong> è meglio evitarlo. Un bottone grigio non spiega perché non funziona. Spesso è meglio lasciarlo attivo e mostrare un errore chiaro quando si clicca.</p>
+<h2 id="testi">Testi</h2>
+<ul><li>Verbo all'inizio, una-tre parole: &quot;Salva bozza&quot;, &quot;Pubblica uscita&quot;.</li><li>Niente &quot;OK&quot;, &quot;Invia&quot; generico o &quot;Clicca qui&quot;.</li></ul>
+<h2 id="token">Token</h2>
+<p><code>--grigna-button-height</code>, <code>-height-sm</code>, <code>-padding-x</code>, <code>-padding-x-sm</code>, <code>-gap</code>, <code>-radius</code>, <code>-font</code>, <code>-font-sm</code>, <code>-primary-bg</code>, <code>-primary-bg-hover</code>, <code>-primary-text</code>, <code>-secondary-bg</code>, <code>-secondary-bg-hover</code>, <code>-secondary-border</code>, <code>-secondary-text</code>, <code>-ghost-bg-hover</code>, <code>-ghost-text</code> (tutti con prefisso <code>--grigna-button</code>).</p>
+<h2 id="accessibilità">Accessibilità</h2>
+<ul><li>Altezza minima 44px (36px solo per <code>--sm</code>).</li><li>Usa sempre <code>&lt;button&gt;</code> per le azioni e <code>&lt;a&gt;</code> per la navigazione, mai un <code>&lt;div&gt;</code> cliccabile.</li><li>Un bottone con sola icona ha sempre <code>aria-label</code>.</li></ul>
+<hr>
+<h2 id="per-gli-agenti" class="agent">Per gli agenti</h2>
+<p><strong>Sempre</strong></p>
+<ul><li><code>&lt;button class=&quot;grigna-button&quot;&gt;</code> più al massimo un modificatore di variante e uno di misura.</li><li>Una sola <code>grigna-button--primary</code> per vista.</li><li>Testo che comincia con un verbo.</li></ul>
+<p><strong>Mai</strong></p>
+<ul><li>Mai stili personalizzati sul bottone (colori, bordi, ombre, padding).</li><li>Mai due bottoni primari affiancati: il secondo diventa secondario.</li><li>Mai <code>grigna-button--sm</code> per l'azione principale.</li></ul>
+    </article>
+    <nav class="pager" aria-label="Pagine vicine"><a class="pager-prev" rel="prev" href="../../docs/fondamenta/icone.html"><span class="pager-dir"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>Precedente</span><span class="pager-label">Icone</span></a><a class="pager-next" rel="next" href="../../docs/componenti/campo.html"><span class="pager-dir">Successiva<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span><span class="pager-label">Campo</span></a></nav>
+    <footer class="foot">
+      <p>Versione per agenti: <a href="bottone.md">bottone.md</a> · <a href="../../llms.txt">llms.txt</a> · <a href="../../dist/tokens.json">tokens.json</a></p>
+      <p>Grigna è un progetto di Loris Rigoni.</p>
+    </footer>
+  </main>
+</div>
+<script>
+  // Indice aperto su schermi larghi, chiuso su telefono
+  const nav = document.getElementById("nav");
+  const wide = matchMedia("(min-width: 768px)");
+  const syncNav = () => { nav.open = wide.matches; };
+  syncNav(); wide.addEventListener("change", syncNav);
+  // Altezza del header fisso, per l'indice e per i link interni
+  const topBar = document.querySelector(".top");
+  const syncTop = () => document.documentElement.style.setProperty("--top-h", topBar.offsetHeight + "px");
+  syncTop(); new ResizeObserver(syncTop).observe(topBar);
+  // Tema: sistema, oppure scelta ricordata in questo browser
+  const LABEL = { system: "sistema", light: "chiaro", dark: "scuro" };
+  let current = "system";
+  function setTheme(mode) {
+    current = mode;
+    document.getElementById("theme-cycle").textContent = "Tema: " + LABEL[mode];
+    if (mode === "system") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", mode);
+    document.querySelectorAll("[data-set]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.set === mode));
+    fillTokens();
+    try { localStorage.setItem("grigna-theme", mode); } catch (e) {}
+  }
+  // Esempi dal vivo: valori dei token per il tema attivo, filtri che si attivano e disattivano
+  function fillTokens() {
+    const css = getComputedStyle(document.documentElement);
+    document.querySelectorAll("[data-token]").forEach((el) => { el.textContent = css.getPropertyValue(el.dataset.token).trim(); });
+  }
+  document.querySelectorAll(".demo .grigna-chip").forEach((c) =>
+    c.addEventListener("click", () => c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") !== "true")));
+  document.querySelectorAll(".demo a[href='#']").forEach((a) => a.addEventListener("click", (ev) => ev.preventDefault()));
+  let saved = "system";
+  try { saved = localStorage.getItem("grigna-theme") || "system"; } catch (e) {}
+  document.querySelectorAll("[data-set]").forEach((b) => b.addEventListener("click", () => setTheme(b.dataset.set)));
+  document.getElementById("theme-cycle").addEventListener("click", () =>
+    setTheme({ system: "light", light: "dark", dark: "system" }[current]));
+  setTheme(saved);
+</script>
+<script src="https://unpkg.com/lucide@1.57.0/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

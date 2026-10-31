@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Segnaposto · Grigna</title>
+<meta name="description" content="Grigna, design system di Loris Rigoni pensato per persone e agenti AI.">
+<link rel="alternate" type="text/markdown" href="segnaposto.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../dist/grigna.css">
+<link rel="stylesheet" href="../../dist/grigna-components.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="top">
+  <a class="brand" href="../../index.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><span class="brand-text"><span class="brand-name">Grigna</span><span class="brand-claim">Design System</span></span></a>
+  <div class="top-actions">
+    <div class="theme" role="group" aria-label="Tema">
+      <button class="grigna-chip" data-set="light">Chiaro</button>
+      <button class="grigna-chip" data-set="dark">Scuro</button>
+      <button class="grigna-chip" data-set="system">Sistema</button>
+    </div>
+    <button class="grigna-chip theme-cycle" id="theme-cycle" aria-label="Cambia tema">Tema: sistema</button>
+  </div>
+</header>
+<div class="layout">
+  <details class="nav" id="nav">
+    <summary><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Indice</summary>
+    <nav aria-label="Indice"><p class="nav-group">Inizia</p><ul><li><a href="../../index.html">Home</a></li><li><a href="../../docs/principi.html">Principi</a></li><li><a href="../../AGENTS.html">Regole per gli agenti</a></li></ul><p class="nav-group">Fondamenti</p><ul><li><a href="../../docs/fondamenta/colore.html">Colore</a></li><li><a href="../../docs/fondamenta/tipografia.html">Tipografia</a></li><li><a href="../../docs/fondamenta/spazi-e-forme.html">Spazi, raggi ed elevazione</a></li><li><a href="../../docs/fondamenta/icone.html">Icone</a></li></ul><p class="nav-group">Componenti</p><ul><li><a href="../../docs/componenti/bottone.html">Bottone</a></li><li><a href="../../docs/componenti/campo.html">Campo</a></li><li><a href="../../docs/componenti/scheda.html">Scheda</a></li><li><a href="../../docs/componenti/badge.html">Badge</a></li><li><a href="../../docs/componenti/filtro.html">Filtro</a></li><li><a href="../../docs/componenti/segnaposto.html" aria-current="page">Segnaposto</a></li></ul></nav>
+  </details>
+  <main id="contenuto">
+    <nav class="crumbs" aria-label="Percorso"><ol>
+      <li><a href="../../index.html">Grigna</a></li>
+      <li><span aria-current="page"><span class="crumb-group">Componenti</span> - Segnaposto</span></li>
+    </ol></nav>
+    
+    <article class="prose">
+<h1 id="segnaposto">Segnaposto</h1>
+<div class="demo" role="group" aria-label="Esempio dal vivo">
+<article class="grigna-card" style="max-width: var(--grigna-size-card-min)">
+  <div class="grigna-card__body">
+    <strong>Titolo di esempio</strong>
+    <span><span class="grigna-placeholder" style="--w:5ch" role="img" aria-label="Dato di esempio"></span> · <span class="grigna-placeholder" style="--w:8ch" role="img" aria-label="Dato di esempio"></span></span>
+  </div>
+</article>
+</div>
+<h2 id="cosè">Cos'è</h2>
+<p>Una barra neutra che prende il posto di un dato che non c'è ancora, in un prototipo o in un esempio.</p>
+<h2 id="quando-usarlo">Quando usarlo</h2>
+<ul><li>Nei prototipi e negli esempi senza dati veri, per numeri, date e misure.</li></ul>
+<h2 id="quando-non-usarlo">Quando non usarlo</h2>
+<ul><li><strong>Con dati veri.</strong> Un dato che manca non si mostra (vedi <a href="../principi.html#6-niente-contenuti-inventati">Principi</a>).</li><li>Per nomi e testi brevi: lì va bene un testo segnaposto leggibile, come &quot;Titolo di esempio&quot;.</li><li>Come indicatore di caricamento: è un'altra cosa, non ancora prevista da Grigna.</li></ul>
+<h2 id="codice">Codice</h2>
+<pre data-lang="html"><code>&lt;dd&gt;&lt;span class=&quot;grigna-placeholder&quot; style=&quot;--w: 5ch&quot; role=&quot;img&quot; aria-label=&quot;Dato di esempio&quot;&gt;&lt;/span&gt;&lt;/dd&gt;</code></pre>
+<p>La larghezza si regola con <code>--w</code>, in <code>ch</code>, più o meno quanti caratteri avrebbe il dato vero.</p>
+<h2 id="segnaposto-e-graffe">Segnaposto e graffe</h2>
+<p>Negli esempi di codice delle docs i dati sono scritti tra graffe, per esempio <code>{distanza} km</code>: significa &quot;qui va il dato&quot;. <strong>Le graffe non si mostrano mai a schermo.</strong> In una pagina vera si mette il dato. In un prototipo si mette un segnaposto.</p>
+<h2 id="token">Token</h2>
+<p><code>--grigna-placeholder-bg</code>, <code>--grigna-placeholder-radius</code>.</p>
+<h2 id="accessibilità">Accessibilità</h2>
+<ul><li><code>role=&quot;img&quot;</code> e <code>aria-label=&quot;Dato di esempio&quot;</code>: chi usa uno screen reader sa che lì non c'è un dato vero.</li></ul>
+<hr>
+<h2 id="per-gli-agenti" class="agent">Per gli agenti</h2>
+<p><strong>Sempre</strong></p>
+<ul><li>In un prototipo senza dati veri usa <code>grigna-placeholder</code> per numeri, date e misure.</li><li>Con <code>role=&quot;img&quot;</code> e <code>aria-label=&quot;Dato di esempio&quot;</code>.</li></ul>
+<p><strong>Mai</strong></p>
+<ul><li>Mai mostrare a schermo le graffe degli esempi (<code>{distanza}</code>). <code>check-page.mjs</code> lo segnala come errore.</li><li>Mai segnaposto in un'interfaccia con dati veri: lì un dato mancante non si mostra.</li><li>Mai numeri inventati &quot;di esempio&quot; al posto del segnaposto.</li></ul>
+    </article>
+    <nav class="pager" aria-label="Pagine vicine"><a class="pager-prev" rel="prev" href="../../docs/componenti/filtro.html"><span class="pager-dir"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>Precedente</span><span class="pager-label">Filtro</span></a><span></span></nav>
+    <footer class="foot">
+      <p>Versione per agenti: <a href="segnaposto.md">segnaposto.md</a> · <a href="../../llms.txt">llms.txt</a> · <a href="../../dist/tokens.json">tokens.json</a></p>
+      <p>Grigna è un progetto di Loris Rigoni.</p>
+    </footer>
+  </main>
+</div>
+<script>
+  // Indice aperto su schermi larghi, chiuso su telefono
+  const nav = document.getElementById("nav");
+  const wide = matchMedia("(min-width: 768px)");
+  const syncNav = () => { nav.open = wide.matches; };
+  syncNav(); wide.addEventListener("change", syncNav);
+  // Altezza del header fisso, per l'indice e per i link interni
+  const topBar = document.querySelector(".top");
+  const syncTop = () => document.documentElement.style.setProperty("--top-h", topBar.offsetHeight + "px");
+  syncTop(); new ResizeObserver(syncTop).observe(topBar);
+  // Tema: sistema, oppure scelta ricordata in questo browser
+  const LABEL = { system: "sistema", light: "chiaro", dark: "scuro" };
+  let current = "system";
+  function setTheme(mode) {
+    current = mode;
+    document.getElementById("theme-cycle").textContent = "Tema: " + LABEL[mode];
+    if (mode === "system") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", mode);
+    document.querySelectorAll("[data-set]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.set === mode));
+    fillTokens();
+    try { localStorage.setItem("grigna-theme", mode); } catch (e) {}
+  }
+  // Esempi dal vivo: valori dei token per il tema attivo, filtri che si attivano e disattivano
+  function fillTokens() {
+    const css = getComputedStyle(document.documentElement);
+    document.querySelectorAll("[data-token]").forEach((el) => { el.textContent = css.getPropertyValue(el.dataset.token).trim(); });
+  }
+  document.querySelectorAll(".demo .grigna-chip").forEach((c) =>
+    c.addEventListener("click", () => c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") !== "true")));
+  document.querySelectorAll(".demo a[href='#']").forEach((a) => a.addEventListener("click", (ev) => ev.preventDefault()));
+  let saved = "system";
+  try { saved = localStorage.getItem("grigna-theme") || "system"; } catch (e) {}
+  document.querySelectorAll("[data-set]").forEach((b) => b.addEventListener("click", () => setTheme(b.dataset.set)));
+  document.getElementById("theme-cycle").addEventListener("click", () =>
+    setTheme({ system: "light", light: "dark", dark: "system" }[current]));
+  setTheme(saved);
+</script>
+<script src="https://unpkg.com/lucide@1.57.0/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

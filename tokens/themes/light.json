@@ -1,0 +1,68 @@
+{
+  "$description": "Grigna, tema chiaro. Stessi nomi del tema scuro: cambiano solo i valori.",
+  "semantic": {
+    "color": {
+      "$type": "color",
+      "surface": {
+        "default": { "$value": "{primitive.color.white}",       "$description": "Sfondo della pagina" },
+        "subtle":  { "$value": "{primitive.color.neutral.50}",  "$description": "Sezioni e zone di raggruppamento" },
+        "raised":  { "$value": "{primitive.color.white}",       "$description": "Schede e pannelli, insieme a un'elevazione" },
+        "inverse": { "$value": "{primitive.color.neutral.900}", "$description": "Superfici scure in tema chiaro (tooltip, toast)" }
+      },
+      "border": {
+        "default": { "$value": "{primitive.color.neutral.200}", "$description": "Divisori e bordi decorativi" },
+        "strong":  { "$value": "{primitive.color.neutral.500}", "$description": "Bordi che definiscono un controllo (campi, checkbox): contrasto almeno 3:1" }
+      },
+      "text": {
+        "default":   { "$value": "{primitive.color.neutral.900}" },
+        "muted":     { "$value": "{primitive.color.neutral.600}", "$description": "Testo secondario e segnaposto" },
+        "disabled":  { "$value": "{primitive.color.neutral.400}", "$description": "Solo per elementi disattivati" },
+        "inverse":   { "$value": "{primitive.color.white}",       "$description": "Testo su surface.inverse" },
+        "on-accent": { "$value": "{primitive.color.white}",       "$description": "Testo su accent.default" }
+      },
+      "accent": {
+        "default": { "$value": "{primitive.color.abete.500}", "$description": "Azione principale. Al massimo un bottone primario per vista" },
+        "hover":   { "$value": "{primitive.color.abete.600}" },
+        "subtle":  { "$value": "{primitive.color.abete.50}",  "$description": "Sfondo tenue per elementi selezionati" },
+        "text":    { "$value": "{primitive.color.abete.600}", "$description": "Link e testo d'accento" }
+      },
+      "focus": {
+        "ring": { "$value": "{primitive.color.abete.500}" }
+      },
+      "feedback": {
+        "success": {
+          "fill": { "$value": "{primitive.color.green.500}" },
+          "bg":   { "$value": "{primitive.color.green.50}" },
+          "text": { "$value": "{primitive.color.green.700}" }
+        },
+        "warning": {
+          "fill": { "$value": "{primitive.color.yellow.500}" },
+          "bg":   { "$value": "{primitive.color.yellow.50}" },
+          "text": { "$value": "{primitive.color.yellow.700}" }
+        },
+        "danger": {
+          "fill": { "$value": "{primitive.color.red.500}" },
+          "bg":   { "$value": "{primitive.color.red.50}" },
+          "text": { "$value": "{primitive.color.red.700}" }
+        },
+        "info": {
+          "fill": { "$value": "{primitive.color.blue.500}" },
+          "bg":   { "$value": "{primitive.color.blue.50}" },
+          "text": { "$value": "{primitive.color.blue.700}" }
+        }
+      }
+    },
+    "elevation": {
+      "$type": "shadow",
+      "flat":    { "$value": [], "$description": "Nessuna ombra: elementi nel flusso della pagina" },
+      "raised":  { "$value": [
+        { "color": "#11141214", "offsetX": "0px", "offsetY": "1px", "blur": "2px",  "spread": "0px" },
+        { "color": "#1114120F", "offsetX": "0px", "offsetY": "2px", "blur": "8px",  "spread": "0px" }
+      ], "$description": "Schede sopra la pagina" },
+      "overlay": { "$value": [
+        { "color": "#11141224", "offsetX": "0px", "offsetY": "8px", "blur": "24px", "spread": "0px" },
+        { "color": "#11141214", "offsetX": "0px", "offsetY": "2px", "blur": "6px",  "spread": "0px" }
+      ], "$description": "Menu, finestre di dialogo, fogli dal basso" }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scheda · Grigna</title>
+<meta name="description" content="Grigna, design system di Loris Rigoni pensato per persone e agenti AI.">
+<link rel="alternate" type="text/markdown" href="scheda.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../dist/grigna.css">
+<link rel="stylesheet" href="../../dist/grigna-components.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="top">
+  <a class="brand" href="../../index.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><span class="brand-text"><span class="brand-name">Grigna</span><span class="brand-claim">Design System</span></span></a>
+  <div class="top-actions">
+    <div class="theme" role="group" aria-label="Tema">
+      <button class="grigna-chip" data-set="light">Chiaro</button>
+      <button class="grigna-chip" data-set="dark">Scuro</button>
+      <button class="grigna-chip" data-set="system">Sistema</button>
+    </div>
+    <button class="grigna-chip theme-cycle" id="theme-cycle" aria-label="Cambia tema">Tema: sistema</button>
+  </div>
+</header>
+<div class="layout">
+  <details class="nav" id="nav">
+    <summary><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Indice</summary>
+    <nav aria-label="Indice"><p class="nav-group">Inizia</p><ul><li><a href="../../index.html">Home</a></li><li><a href="../../docs/principi.html">Principi</a></li><li><a href="../../AGENTS.html">Regole per gli agenti</a></li></ul><p class="nav-group">Fondamenti</p><ul><li><a href="../../docs/fondamenta/colore.html">Colore</a></li><li><a href="../../docs/fondamenta/tipografia.html">Tipografia</a></li><li><a href="../../docs/fondamenta/spazi-e-forme.html">Spazi, raggi ed elevazione</a></li><li><a href="../../docs/fondamenta/icone.html">Icone</a></li></ul><p class="nav-group">Componenti</p><ul><li><a href="../../docs/componenti/bottone.html">Bottone</a></li><li><a href="../../docs/componenti/campo.html">Campo</a></li><li><a href="../../docs/componenti/scheda.html" aria-current="page">Scheda</a></li><li><a href="../../docs/componenti/badge.html">Badge</a></li><li><a href="../../docs/componenti/filtro.html">Filtro</a></li><li><a href="../../docs/componenti/segnaposto.html">Segnaposto</a></li></ul></nav>
+  </details>
+  <main id="contenuto">
+    <nav class="crumbs" aria-label="Percorso"><ol>
+      <li><a href="../../index.html">Grigna</a></li>
+      <li><span aria-current="page"><span class="crumb-group">Componenti</span> - Scheda</span></li>
+    </ol></nav>
+    
+    <article class="prose">
+<h1 id="scheda">Scheda</h1>
+<div class="demo" role="group" aria-label="Esempio dal vivo">
+<div class="demo-grid">
+<article class="grigna-card">
+  <div class="grigna-card__body">
+    <strong>Scheda semplice</strong>
+    <span class="demo-label">Testo di prova dentro una scheda.</span>
+  </div>
+</article>
+<article class="grigna-card grigna-card--interactive">
+  <div class="grigna-card__media"></div>
+  <div class="grigna-card__body">
+    <a class="grigna-card__link" href="#"><strong>Scheda cliccabile</strong></a>
+    <span class="demo-label">Passa sopra col mouse.</span>
+  </div>
+</article>
+</div>
+</div>
+<h2 id="cosè">Cos'è</h2>
+<p>Un contenitore elevato che raggruppa le informazioni su un solo oggetto: una gita, un rifugio, un articolo.</p>
+<h2 id="quando-usarla">Quando usarla</h2>
+<ul><li>Per elementi di una lista o di una griglia, tutti dello stesso tipo, che si possono aprire.</li><li>Per isolare un blocco di contenuto dalla pagina.</li></ul>
+<h2 id="quando-non-usarla">Quando non usarla</h2>
+<ul><li>Per liste dense di righe (impostazioni, risultati testuali): bastano righe separate da un bordo.</li><li>Una scheda dentro un'altra scheda: mai.</li></ul>
+<h2 id="codice">Codice</h2>
+<pre data-lang="html"><code>&lt;article class=&quot;grigna-card&quot;&gt;
+  &lt;div class=&quot;grigna-card__media&quot;&gt;&lt;img src=&quot;…&quot; alt=&quot;Descrizione della foto&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;grigna-card__body&quot;&gt;…&lt;/div&gt;
+&lt;/article&gt;</code></pre>
+<p>Scheda cliccabile su tutta la superficie:</p>
+<pre data-lang="html"><code>&lt;article class=&quot;grigna-card grigna-card--interactive&quot;&gt;
+  &lt;div class=&quot;grigna-card__media&quot;&gt;&lt;img src=&quot;…&quot; alt=&quot;…&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;grigna-card__body&quot;&gt;
+    &lt;h3&gt;&lt;a class=&quot;grigna-card__link&quot; href=&quot;/gite/…&quot;&gt;Titolo&lt;/a&gt;&lt;/h3&gt;
+    …
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+<p>C'è <strong>un solo link</strong>, sul titolo. La classe <code>grigna-card__link</code> lo estende a tutta la scheda, così chi usa uno screen reader sente un link con un nome chiaro e non &quot;link, link, link&quot;.</p>
+<h2 id="varianti-e-stati">Varianti e stati</h2>
+<div class="table"><table><thead><tr><th>Classe</th><th>Uso</th></tr></thead><tbody><tr><td><code>grigna-card</code></td><td>Scheda semplice</td></tr><tr><td><code>grigna-card--interactive</code></td><td>Cliccabile: l'ombra cresce al passaggio del mouse, focus su tutta la scheda</td></tr><tr><td><code>grigna-card__media</code></td><td>Area immagine 16:9 in alto. Senza immagine mostra la superficie tenue</td></tr><tr><td><code>grigna-card__body</code></td><td>Contenuto, con margine interno e spazio tra le righe</td></tr></tbody></table></div>
+<h2 id="token">Token</h2>
+<p><code>--grigna-card-bg</code>, <code>-border</code>, <code>-radius</code>, <code>-padding</code>, <code>-gap</code>, <code>-shadow</code>, <code>-shadow-hover</code> (tutti con prefisso <code>--grigna-card</code>).</p>
+<h2 id="accessibilità">Accessibilità</h2>
+<ul><li>Ogni immagine ha un <code>alt</code> che descrive la foto. Se è solo decorativa, <code>alt=&quot;&quot;</code>.</li><li>Nella scheda cliccabile non vanno altri link o bottoni, perché sarebbero coperti dal link principale.</li></ul>
+<hr>
+<h2 id="per-gli-agenti" class="agent">Per gli agenti</h2>
+<p><strong>Sempre</strong></p>
+<ul><li><code>&lt;article class=&quot;grigna-card&quot;&gt;</code> per un oggetto, con <code>__media</code> e <code>__body</code>.</li><li>Se è cliccabile: <code>--interactive</code> e <strong>un solo</strong> <code>grigna-card__link</code> sul titolo.</li></ul>
+<p><strong>Mai</strong></p>
+<ul><li>Mai schede annidate.</li><li>Mai più link o bottoni dentro una scheda <code>--interactive</code>.</li><li>Mai cambiare ombra, raggio o bordo della scheda: se serve una variante, si aggiunge al sistema.</li></ul>
+    </article>
+    <nav class="pager" aria-label="Pagine vicine"><a class="pager-prev" rel="prev" href="../../docs/componenti/campo.html"><span class="pager-dir"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>Precedente</span><span class="pager-label">Campo</span></a><a class="pager-next" rel="next" href="../../docs/componenti/badge.html"><span class="pager-dir">Successiva<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span><span class="pager-label">Badge</span></a></nav>
+    <footer class="foot">
+      <p>Versione per agenti: <a href="scheda.md">scheda.md</a> · <a href="../../llms.txt">llms.txt</a> · <a href="../../dist/tokens.json">tokens.json</a></p>
+      <p>Grigna è un progetto di Loris Rigoni.</p>
+    </footer>
+  </main>
+</div>
+<script>
+  // Indice aperto su schermi larghi, chiuso su telefono
+  const nav = document.getElementById("nav");
+  const wide = matchMedia("(min-width: 768px)");
+  const syncNav = () => { nav.open = wide.matches; };
+  syncNav(); wide.addEventListener("change", syncNav);
+  // Altezza del header fisso, per l'indice e per i link interni
+  const topBar = document.querySelector(".top");
+  const syncTop = () => document.documentElement.style.setProperty("--top-h", topBar.offsetHeight + "px");
+  syncTop(); new ResizeObserver(syncTop).observe(topBar);
+  // Tema: sistema, oppure scelta ricordata in questo browser
+  const LABEL = { system: "sistema", light: "chiaro", dark: "scuro" };
+  let current = "system";
+  function setTheme(mode) {
+    current = mode;
+    document.getElementById("theme-cycle").textContent = "Tema: " + LABEL[mode];
+    if (mode === "system") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", mode);
+    document.querySelectorAll("[data-set]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.set === mode));
+    fillTokens();
+    try { localStorage.setItem("grigna-theme", mode); } catch (e) {}
+  }
+  // Esempi dal vivo: valori dei token per il tema attivo, filtri che si attivano e disattivano
+  function fillTokens() {
+    const css = getComputedStyle(document.documentElement);
+    document.querySelectorAll("[data-token]").forEach((el) => { el.textContent = css.getPropertyValue(el.dataset.token).trim(); });
+  }
+  document.querySelectorAll(".demo .grigna-chip").forEach((c) =>
+    c.addEventListener("click", () => c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") !== "true")));
+  document.querySelectorAll(".demo a[href='#']").forEach((a) => a.addEventListener("click", (ev) => ev.preventDefault()));
+  let saved = "system";
+  try { saved = localStorage.getItem("grigna-theme") || "system"; } catch (e) {}
+  document.querySelectorAll("[data-set]").forEach((b) => b.addEventListener("click", () => setTheme(b.dataset.set)));
+  document.getElementById("theme-cycle").addEventListener("click", () =>
+    setTheme({ system: "light", light: "dark", dark: "system" }[current]));
+  setTheme(saved);
+</script>
+<script src="https://unpkg.com/lucide@1.57.0/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campo · Grigna</title>
+<meta name="description" content="Grigna, design system di Loris Rigoni pensato per persone e agenti AI.">
+<link rel="alternate" type="text/markdown" href="campo.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../dist/grigna.css">
+<link rel="stylesheet" href="../../dist/grigna-components.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="top">
+  <a class="brand" href="../../index.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><span class="brand-text"><span class="brand-name">Grigna</span><span class="brand-claim">Design System</span></span></a>
+  <div class="top-actions">
+    <div class="theme" role="group" aria-label="Tema">
+      <button class="grigna-chip" data-set="light">Chiaro</button>
+      <button class="grigna-chip" data-set="dark">Scuro</button>
+      <button class="grigna-chip" data-set="system">Sistema</button>
+    </div>
+    <button class="grigna-chip theme-cycle" id="theme-cycle" aria-label="Cambia tema">Tema: sistema</button>
+  </div>
+</header>
+<div class="layout">
+  <details class="nav" id="nav">
+    <summary><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Indice</summary>
+    <nav aria-label="Indice"><p class="nav-group">Inizia</p><ul><li><a href="../../index.html">Home</a></li><li><a href="../../docs/principi.html">Principi</a></li><li><a href="../../AGENTS.html">Regole per gli agenti</a></li></ul><p class="nav-group">Fondamenti</p><ul><li><a href="../../docs/fondamenta/colore.html">Colore</a></li><li><a href="../../docs/fondamenta/tipografia.html">Tipografia</a></li><li><a href="../../docs/fondamenta/spazi-e-forme.html">Spazi, raggi ed elevazione</a></li><li><a href="../../docs/fondamenta/icone.html">Icone</a></li></ul><p class="nav-group">Componenti</p><ul><li><a href="../../docs/componenti/bottone.html">Bottone</a></li><li><a href="../../docs/componenti/campo.html" aria-current="page">Campo</a></li><li><a href="../../docs/componenti/scheda.html">Scheda</a></li><li><a href="../../docs/componenti/badge.html">Badge</a></li><li><a href="../../docs/componenti/filtro.html">Filtro</a></li><li><a href="../../docs/componenti/segnaposto.html">Segnaposto</a></li></ul></nav>
+  </details>
+  <main id="contenuto">
+    <nav class="crumbs" aria-label="Percorso"><ol>
+      <li><a href="../../index.html">Grigna</a></li>
+      <li><span aria-current="page"><span class="crumb-group">Componenti</span> - Campo</span></li>
+    </ol></nav>
+    
+    <article class="prose">
+<h1 id="campo">Campo</h1>
+<div class="demo" role="group" aria-label="Esempio dal vivo">
+<div class="demo-grid">
+<div class="grigna-field">
+  <label class="grigna-field__label" for="demo-titolo">Titolo dell'uscita</label>
+  <input class="grigna-field__input" id="demo-titolo" placeholder="Via normale dal rifugio" aria-describedby="demo-titolo-aiuto">
+  <p class="grigna-field__help" id="demo-titolo-aiuto">Lo vedranno tutti nella scheda.</p>
+</div>
+<div class="grigna-field">
+  <label class="grigna-field__label" for="demo-dislivello">Dislivello (m)</label>
+  <input class="grigna-field__input" id="demo-dislivello" value="abc" aria-invalid="true" aria-describedby="demo-dislivello-errore">
+  <p class="grigna-field__error" id="demo-dislivello-errore">Inserisci un numero, per esempio 850.</p>
+</div>
+<div class="grigna-field">
+  <label class="grigna-field__label" for="demo-tipo">Tipo di attività</label>
+  <select class="grigna-field__input" id="demo-tipo"><option>Escursione</option><option>Salita</option><option>Traversata</option></select>
+</div>
+<div class="grigna-field">
+  <label class="grigna-field__label" for="demo-off">Campo disattivato</label>
+  <input class="grigna-field__input" id="demo-off" value="Non modificabile" disabled>
+</div>
+</div>
+</div>
+<h2 id="cosè">Cos'è</h2>
+<p>Un'etichetta con il suo controllo di inserimento (testo, menu a tendina o testo lungo), più un aiuto o un errore facoltativi.</p>
+<h2 id="quando-usarlo">Quando usarlo</h2>
+<ul><li>Ogni volta che la persona deve scrivere o scegliere un valore in un modulo.</li></ul>
+<h2 id="quando-non-usarlo">Quando non usarlo</h2>
+<ul><li>Per scegliere tra 2-5 opzioni sempre visibili: meglio un gruppo di <a href="filtro.html">filtri</a> o, in futuro, i radio.</li><li>Per cercare: servirà un componente di ricerca dedicato.</li></ul>
+<h2 id="codice">Codice</h2>
+<pre data-lang="html"><code>&lt;div class=&quot;grigna-field&quot;&gt;
+  &lt;label class=&quot;grigna-field__label&quot; for=&quot;titolo&quot;&gt;Titolo dell'uscita&lt;/label&gt;
+  &lt;input class=&quot;grigna-field__input&quot; id=&quot;titolo&quot; aria-describedby=&quot;titolo-aiuto&quot;&gt;
+  &lt;p class=&quot;grigna-field__help&quot; id=&quot;titolo-aiuto&quot;&gt;Lo vedranno tutti nella scheda.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p>Con errore:</p>
+<pre data-lang="html"><code>&lt;div class=&quot;grigna-field&quot;&gt;
+  &lt;label class=&quot;grigna-field__label&quot; for=&quot;dislivello&quot;&gt;Dislivello (m)&lt;/label&gt;
+  &lt;input class=&quot;grigna-field__input&quot; id=&quot;dislivello&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;dislivello-errore&quot;&gt;
+  &lt;p class=&quot;grigna-field__error&quot; id=&quot;dislivello-errore&quot;&gt;Inserisci un numero, per esempio 850.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p>Funziona allo stesso modo con <code>&lt;select class=&quot;grigna-field__input&quot;&gt;</code> e <code>&lt;textarea class=&quot;grigna-field__input&quot;&gt;</code>.</p>
+<h2 id="varianti-e-stati">Varianti e stati</h2>
+<div class="table"><table><thead><tr><th>Stato</th><th>Come si ottiene</th></tr></thead><tbody><tr><td>Normale</td><td>—</td></tr><tr><td>Focus</td><td>Automatico da tastiera e mouse: bordo e anello Abete</td></tr><tr><td>Errore</td><td><code>aria-invalid=&quot;true&quot;</code> sul controllo, più <code>grigna-field__error</code> collegato con <code>aria-describedby</code></td></tr><tr><td>Disattivato</td><td><code>disabled</code> sul controllo</td></tr></tbody></table></div>
+<p>La select ha la sua freccia, con lo stesso margine interno del testo.</p>
+<h2 id="testi">Testi</h2>
+<ul><li><strong>Etichetta:</strong> breve e sempre visibile. Il segnaposto non la sostituisce, perché sparisce mentre si scrive.</li><li><strong>Segnaposto:</strong> un esempio realistico (&quot;Via normale dal rifugio&quot;), facoltativo.</li><li><strong>Errore:</strong> cosa è successo e come rimediare, in una frase. &quot;Inserisci un numero, per esempio 850&quot;, non &quot;Valore non valido&quot;.</li></ul>
+<h2 id="token">Token</h2>
+<p><code>--grigna-field-height</code>, <code>-padding-x</code>, <code>-radius</code>, <code>-gap</code>, <code>-font</code>, <code>-label-font</code>, <code>-help-font</code>, <code>-bg</code>, <code>-border</code>, <code>-border-focus</code>, <code>-border-error</code>, <code>-text</code>, <code>-placeholder</code>, <code>-help-text</code>, <code>-error-text</code> (tutti con prefisso <code>--grigna-field</code>).</p>
+<h2 id="accessibilità">Accessibilità</h2>
+<ul><li><code>for</code> dell'etichetta uguale all'<code>id</code> del controllo.</li><li>Aiuto ed errore collegati con <code>aria-describedby</code>.</li><li>L'errore non si segnala solo con il bordo rosso: c'è sempre il testo.</li></ul>
+<hr>
+<h2 id="per-gli-agenti" class="agent">Per gli agenti</h2>
+<p><strong>Sempre</strong></p>
+<ul><li>Struttura completa: <code>grigna-field</code> &gt; <code>grigna-field__label</code> + <code>grigna-field__input</code> (+ <code>__help</code> o <code>__error</code>).</li><li><code>&lt;label&gt;</code> collegata, anche se lo spazio è poco.</li><li>Errore con <code>aria-invalid=&quot;true&quot;</code> e messaggio che dice come rimediare.</li></ul>
+<p><strong>Mai</strong></p>
+<ul><li>Mai un campo senza etichetta visibile, mai il segnaposto al posto dell'etichetta.</li><li>Mai segnalare l'errore solo con il colore.</li><li>Mai inventare stati non previsti (successo verde, avviso giallo sul campo): se servono, si aggiungono al sistema.</li></ul>
+    </article>
+    <nav class="pager" aria-label="Pagine vicine"><a class="pager-prev" rel="prev" href="../../docs/componenti/bottone.html"><span class="pager-dir"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>Precedente</span><span class="pager-label">Bottone</span></a><a class="pager-next" rel="next" href="../../docs/componenti/scheda.html"><span class="pager-dir">Successiva<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span><span class="pager-label">Scheda</span></a></nav>
+    <footer class="foot">
+      <p>Versione per agenti: <a href="campo.md">campo.md</a> · <a href="../../llms.txt">llms.txt</a> · <a href="../../dist/tokens.json">tokens.json</a></p>
+      <p>Grigna è un progetto di Loris Rigoni.</p>
+    </footer>
+  </main>
+</div>
+<script>
+  // Indice aperto su schermi larghi, chiuso su telefono
+  const nav = document.getElementById("nav");
+  const wide = matchMedia("(min-width: 768px)");
+  const syncNav = () => { nav.open = wide.matches; };
+  syncNav(); wide.addEventListener("change", syncNav);
+  // Altezza del header fisso, per l'indice e per i link interni
+  const topBar = document.querySelector(".top");
+  const syncTop = () => document.documentElement.style.setProperty("--top-h", topBar.offsetHeight + "px");
+  syncTop(); new ResizeObserver(syncTop).observe(topBar);
+  // Tema: sistema, oppure scelta ricordata in questo browser
+  const LABEL = { system: "sistema", light: "chiaro", dark: "scuro" };
+  let current = "system";
+  function setTheme(mode) {
+    current = mode;
+    document.getElementById("theme-cycle").textContent = "Tema: " + LABEL[mode];
+    if (mode === "system") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", mode);
+    document.querySelectorAll("[data-set]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.set === mode));
+    fillTokens();
+    try { localStorage.setItem("grigna-theme", mode); } catch (e) {}
+  }
+  // Esempi dal vivo: valori dei token per il tema attivo, filtri che si attivano e disattivano
+  function fillTokens() {
+    const css = getComputedStyle(document.documentElement);
+    document.querySelectorAll("[data-token]").forEach((el) => { el.textContent = css.getPropertyValue(el.dataset.token).trim(); });
+  }
+  document.querySelectorAll(".demo .grigna-chip").forEach((c) =>
+    c.addEventListener("click", () => c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") !== "true")));
+  document.querySelectorAll(".demo a[href='#']").forEach((a) => a.addEventListener("click", (ev) => ev.preventDefault()));
+  let saved = "system";
+  try { saved = localStorage.getItem("grigna-theme") || "system"; } catch (e) {}
+  document.querySelectorAll("[data-set]").forEach((b) => b.addEventListener("click", () => setTheme(b.dataset.set)));
+  document.getElementById("theme-cycle").addEventListener("click", () =>
+    setTheme({ system: "light", light: "dark", dark: "system" }[current]));
+  setTheme(saved);
+</script>
+<script src="https://unpkg.com/lucide@1.57.0/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

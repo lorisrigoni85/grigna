@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spazi, raggi ed elevazione · Grigna</title>
+<meta name="description" content="Grigna, design system di Loris Rigoni pensato per persone e agenti AI.">
+<link rel="alternate" type="text/markdown" href="spazi-e-forme.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../dist/grigna.css">
+<link rel="stylesheet" href="../../dist/grigna-components.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="top">
+  <a class="brand" href="../../index.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><span class="brand-text"><span class="brand-name">Grigna</span><span class="brand-claim">Design System</span></span></a>
+  <div class="top-actions">
+    <div class="theme" role="group" aria-label="Tema">
+      <button class="grigna-chip" data-set="light">Chiaro</button>
+      <button class="grigna-chip" data-set="dark">Scuro</button>
+      <button class="grigna-chip" data-set="system">Sistema</button>
+    </div>
+    <button class="grigna-chip theme-cycle" id="theme-cycle" aria-label="Cambia tema">Tema: sistema</button>
+  </div>
+</header>
+<div class="layout">
+  <details class="nav" id="nav">
+    <summary><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Indice</summary>
+    <nav aria-label="Indice"><p class="nav-group">Inizia</p><ul><li><a href="../../index.html">Home</a></li><li><a href="../../docs/principi.html">Principi</a></li><li><a href="../../AGENTS.html">Regole per gli agenti</a></li></ul><p class="nav-group">Fondamenti</p><ul><li><a href="../../docs/fondamenta/colore.html">Colore</a></li><li><a href="../../docs/fondamenta/tipografia.html">Tipografia</a></li><li><a href="../../docs/fondamenta/spazi-e-forme.html" aria-current="page">Spazi, raggi ed elevazione</a></li><li><a href="../../docs/fondamenta/icone.html">Icone</a></li></ul><p class="nav-group">Componenti</p><ul><li><a href="../../docs/componenti/bottone.html">Bottone</a></li><li><a href="../../docs/componenti/campo.html">Campo</a></li><li><a href="../../docs/componenti/scheda.html">Scheda</a></li><li><a href="../../docs/componenti/badge.html">Badge</a></li><li><a href="../../docs/componenti/filtro.html">Filtro</a></li><li><a href="../../docs/componenti/segnaposto.html">Segnaposto</a></li></ul></nav>
+  </details>
+  <main id="contenuto">
+    <nav class="crumbs" aria-label="Percorso"><ol>
+      <li><a href="../../index.html">Grigna</a></li>
+      <li><span aria-current="page"><span class="crumb-group">Fondamenti</span> - Spazi, raggi ed elevazione</span></li>
+    </ol></nav>
+    
+    <article class="prose">
+<h1 id="spazi-raggi-ed-elevazione">Spazi, raggi ed elevazione</h1>
+<div class="demo" role="group" aria-label="Esempio dal vivo">
+<div class="demo-stack">
+<span class="demo-label">Spazi</span>
+<div><div class="demo-bar" style="width: var(--grigna-space-2xs)"></div><code class="demo-label">space-2xs · <span data-token="--grigna-space-2xs"></span></code></div>
+<div><div class="demo-bar" style="width: var(--grigna-space-xs)"></div><code class="demo-label">space-xs · <span data-token="--grigna-space-xs"></span></code></div>
+<div><div class="demo-bar" style="width: var(--grigna-space-sm)"></div><code class="demo-label">space-sm · <span data-token="--grigna-space-sm"></span></code></div>
+<div><div class="demo-bar" style="width: var(--grigna-space-md)"></div><code class="demo-label">space-md · <span data-token="--grigna-space-md"></span></code></div>
+<div><div class="demo-bar" style="width: var(--grigna-space-lg)"></div><code class="demo-label">space-lg · <span data-token="--grigna-space-lg"></span></code></div>
+<div><div class="demo-bar" style="width: var(--grigna-space-xl)"></div><code class="demo-label">space-xl · <span data-token="--grigna-space-xl"></span></code></div>
+<div><div class="demo-bar" style="width: var(--grigna-space-2xl)"></div><code class="demo-label">space-2xl · <span data-token="--grigna-space-2xl"></span></code></div>
+<div><div class="demo-bar" style="width: var(--grigna-space-3xl)"></div><code class="demo-label">space-3xl · <span data-token="--grigna-space-3xl"></span></code></div>
+<span class="demo-label">Raggi</span>
+<div class="demo-grid">
+<div><div class="demo-box" style="border-radius: var(--grigna-radius-control)"></div><code class="demo-label">radius-control</code></div>
+<div><div class="demo-box" style="border-radius: var(--grigna-radius-card)"></div><code class="demo-label">radius-card</code></div>
+<div><div class="demo-box" style="border-radius: var(--grigna-radius-overlay)"></div><code class="demo-label">radius-overlay</code></div>
+<div><div class="demo-box" style="border-radius: var(--grigna-radius-pill)"></div><code class="demo-label">radius-pill</code></div>
+</div>
+<span class="demo-label">Elevazione</span>
+<div class="demo-grid">
+<div class="demo-surface" style="box-shadow: var(--grigna-elevation-flat)"><code class="demo-label">elevation-flat</code></div>
+<div class="demo-surface" style="box-shadow: var(--grigna-elevation-raised)"><code class="demo-label">elevation-raised</code></div>
+<div class="demo-surface" style="box-shadow: var(--grigna-elevation-overlay)"><code class="demo-label">elevation-overlay</code></div>
+</div>
+</div>
+</div>
+<h2 id="spazi">Spazi</h2>
+<p>Una scala su base 4px, con otto nomi. Tra un elemento e l'altro si usa sempre uno di questi.</p>
+<div class="table"><table><thead><tr><th>Token</th><th>Valore</th><th>Uso tipico</th></tr></thead><tbody><tr><td><code>--grigna-space-2xs</code></td><td>4px</td><td>Tra icona e testo piccolo</td></tr><tr><td><code>--grigna-space-xs</code></td><td>8px</td><td>Tra elementi dello stesso gruppo</td></tr><tr><td><code>--grigna-space-sm</code></td><td>12px</td><td>Margine interno dei campi, tra righe di dati</td></tr><tr><td><code>--grigna-space-md</code></td><td>16px</td><td>Margine interno delle schede, margine laterale su mobile</td></tr><tr><td><code>--grigna-space-lg</code></td><td>24px</td><td>Tra gruppi diversi</td></tr><tr><td><code>--grigna-space-xl</code></td><td>32px</td><td>Tra sezioni</td></tr><tr><td><code>--grigna-space-2xl</code></td><td>48px</td><td>Sopra i titoli di sezione</td></tr><tr><td><code>--grigna-space-3xl</code></td><td>64px</td><td>Respiro di pagina</td></tr></tbody></table></div>
+<p><strong>Regola pratica:</strong> più due cose sono legate, più stanno vicine. Gli spazi crescono passando da &quot;dentro un elemento&quot; a &quot;tra elementi&quot; a &quot;tra sezioni&quot;.</p>
+<h2 id="raggi">Raggi</h2>
+<div class="table"><table><thead><tr><th>Token</th><th>Valore</th><th>Uso</th></tr></thead><tbody><tr><td><code>--grigna-radius-control</code></td><td>8px</td><td>Bottoni, campi</td></tr><tr><td><code>--grigna-radius-card</code></td><td>12px</td><td>Schede, pannelli</td></tr><tr><td><code>--grigna-radius-overlay</code></td><td>16px</td><td>Finestre di dialogo, fogli dal basso</td></tr><tr><td><code>--grigna-radius-pill</code></td><td>tondo</td><td>Badge, filtri, etichette di stato</td></tr></tbody></table></div>
+<p>Gli angoli sono generosi, per un tono amichevole. Un bordo su un solo lato non si arrotonda.</p>
+<h2 id="elevazione">Elevazione</h2>
+<p>Tre livelli. Più un elemento è &quot;sopra&quot; la pagina, più ombra ha.</p>
+<div class="table"><table><thead><tr><th>Token</th><th>Uso</th></tr></thead><tbody><tr><td><code>--grigna-elevation-flat</code></td><td>Elementi nel flusso della pagina: nessuna ombra</td></tr><tr><td><code>--grigna-elevation-raised</code></td><td>Schede</td></tr><tr><td><code>--grigna-elevation-overlay</code></td><td>Menu, finestre di dialogo, fogli dal basso, hover delle schede cliccabili</td></tr></tbody></table></div>
+<p>Nel tema scuro le ombre si vedono poco: l'elevazione si legge soprattutto da <code>surface-raised</code>, che è più chiara della pagina. Per questo un elemento elevato usa sempre <strong>entrambi</strong>: superficie e ombra.</p>
+<h2 id="misure">Misure</h2>
+<div class="table"><table><thead><tr><th>Token</th><th>Valore</th><th>Uso</th></tr></thead><tbody><tr><td><code>--grigna-size-touch-target</code></td><td>44px</td><td>Area minima di tocco di ogni elemento interattivo</td></tr><tr><td><code>--grigna-size-text-min</code></td><td>16px</td><td>Dimensione minima del testo corrente</td></tr><tr><td><code>--grigna-size-icon-sm</code> / <code>-md</code> / <code>-lg</code></td><td>16 / 20 / 24px</td><td>Icone</td></tr><tr><td><code>--grigna-size-focus-ring</code></td><td>2px</td><td>Spessore dell'anello del focus</td></tr></tbody></table></div>
+<h2 id="layout">Layout</h2>
+<div class="table"><table><thead><tr><th>Token</th><th>Valore</th><th>Uso</th></tr></thead><tbody><tr><td><code>--grigna-size-page-max</code></td><td>1200px</td><td>Larghezza massima del contenuto della pagina, centrato</td></tr><tr><td><code>--grigna-size-card-min</code></td><td>280px</td><td>Larghezza minima di una scheda in una griglia</td></tr></tbody></table></div>
+<p>Una griglia di schede che si adatta da sola a telefono e computer:</p>
+<pre data-lang="css"><code>.pagina { max-width: var(--grigna-size-page-max); margin-inline: auto; padding-inline: var(--grigna-space-md); }
+.schede { display: grid; gap: var(--grigna-space-lg);
+          grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--grigna-size-card-min)), 1fr)); }</code></pre>
+<p><strong>Punto di rottura: 768px.</strong> Sotto è telefono, sopra è tablet e computer. Nelle media query il CSS non accetta variabili, quindi è l'unico valore che si scrive a mano: <code>@media (min-width: 768px)</code>. Prima di usarlo, chiediti se una griglia che si adatta da sola non basta già.</p>
+<p>(Valori scelti il 30/10/2026.)</p>
+<hr>
+<h2 id="per-gli-agenti" class="agent">Per gli agenti</h2>
+<p><strong>Sempre</strong></p>
+<ul><li><code>margin</code>, <code>padding</code> e <code>gap</code> con <code>--grigna-space-*</code>.</li><li><code>border-radius</code> con <code>--grigna-radius-*</code>.</li><li><code>box-shadow</code> con <code>--grigna-elevation-*</code>, insieme a <code>--grigna-color-surface-raised</code>.</li><li>Elementi interattivi alti almeno <code>--grigna-size-touch-target</code>.</li><li>Larghezza della pagina con <code>--grigna-size-page-max</code>, griglie di schede con <code>--grigna-size-card-min</code>.</li><li>Nelle media query solo il punto di rottura <code>768px</code>.</li></ul>
+<p><strong>Mai</strong></p>
+<ul><li>Mai valori in px scritti a mano per spazi, raggi e ombre (fanno eccezione i bordi da 1px).</li><li>Mai valori &quot;a metà&quot; (10px, 14px, 20px di spazio): se servono davvero, si aggiungono al sistema e non si improvvisano.</li><li>Mai ombre colorate o sfumate fatte a mano.</li></ul>
+    </article>
+    <nav class="pager" aria-label="Pagine vicine"><a class="pager-prev" rel="prev" href="../../docs/fondamenta/tipografia.html"><span class="pager-dir"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>Precedente</span><span class="pager-label">Tipografia</span></a><a class="pager-next" rel="next" href="../../docs/fondamenta/icone.html"><span class="pager-dir">Successiva<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span><span class="pager-label">Icone</span></a></nav>
+    <footer class="foot">
+      <p>Versione per agenti: <a href="spazi-e-forme.md">spazi-e-forme.md</a> · <a href="../../llms.txt">llms.txt</a> · <a href="../../dist/tokens.json">tokens.json</a></p>
+      <p>Grigna è un progetto di Loris Rigoni.</p>
+    </footer>
+  </main>
+</div>
+<script>
+  // Indice aperto su schermi larghi, chiuso su telefono
+  const nav = document.getElementById("nav");
+  const wide = matchMedia("(min-width: 768px)");
+  const syncNav = () => { nav.open = wide.matches; };
+  syncNav(); wide.addEventListener("change", syncNav);
+  // Altezza del header fisso, per l'indice e per i link interni
+  const topBar = document.querySelector(".top");
+  const syncTop = () => document.documentElement.style.setProperty("--top-h", topBar.offsetHeight + "px");
+  syncTop(); new ResizeObserver(syncTop).observe(topBar);
+  // Tema: sistema, oppure scelta ricordata in questo browser
+  const LABEL = { system: "sistema", light: "chiaro", dark: "scuro" };
+  let current = "system";
+  function setTheme(mode) {
+    current = mode;
+    document.getElementById("theme-cycle").textContent = "Tema: " + LABEL[mode];
+    if (mode === "system") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", mode);
+    document.querySelectorAll("[data-set]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.set === mode));
+    fillTokens();
+    try { localStorage.setItem("grigna-theme", mode); } catch (e) {}
+  }
+  // Esempi dal vivo: valori dei token per il tema attivo, filtri che si attivano e disattivano
+  function fillTokens() {
+    const css = getComputedStyle(document.documentElement);
+    document.querySelectorAll("[data-token]").forEach((el) => { el.textContent = css.getPropertyValue(el.dataset.token).trim(); });
+  }
+  document.querySelectorAll(".demo .grigna-chip").forEach((c) =>
+    c.addEventListener("click", () => c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") !== "true")));
+  document.querySelectorAll(".demo a[href='#']").forEach((a) => a.addEventListener("click", (ev) => ev.preventDefault()));
+  let saved = "system";
+  try { saved = localStorage.getItem("grigna-theme") || "system"; } catch (e) {}
+  document.querySelectorAll("[data-set]").forEach((b) => b.addEventListener("click", () => setTheme(b.dataset.set)));
+  document.getElementById("theme-cycle").addEventListener("click", () =>
+    setTheme({ system: "light", light: "dark", dark: "system" }[current]));
+  setTheme(saved);
+</script>
+<script src="https://unpkg.com/lucide@1.57.0/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

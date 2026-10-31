@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Icone · Grigna</title>
+<meta name="description" content="Grigna, design system di Loris Rigoni pensato per persone e agenti AI.">
+<link rel="alternate" type="text/markdown" href="icone.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../dist/grigna.css">
+<link rel="stylesheet" href="../../dist/grigna-components.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="top">
+  <a class="brand" href="../../index.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><span class="brand-text"><span class="brand-name">Grigna</span><span class="brand-claim">Design System</span></span></a>
+  <div class="top-actions">
+    <div class="theme" role="group" aria-label="Tema">
+      <button class="grigna-chip" data-set="light">Chiaro</button>
+      <button class="grigna-chip" data-set="dark">Scuro</button>
+      <button class="grigna-chip" data-set="system">Sistema</button>
+    </div>
+    <button class="grigna-chip theme-cycle" id="theme-cycle" aria-label="Cambia tema">Tema: sistema</button>
+  </div>
+</header>
+<div class="layout">
+  <details class="nav" id="nav">
+    <summary><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Indice</summary>
+    <nav aria-label="Indice"><p class="nav-group">Inizia</p><ul><li><a href="../../index.html">Home</a></li><li><a href="../../docs/principi.html">Principi</a></li><li><a href="../../AGENTS.html">Regole per gli agenti</a></li></ul><p class="nav-group">Fondamenti</p><ul><li><a href="../../docs/fondamenta/colore.html">Colore</a></li><li><a href="../../docs/fondamenta/tipografia.html">Tipografia</a></li><li><a href="../../docs/fondamenta/spazi-e-forme.html">Spazi, raggi ed elevazione</a></li><li><a href="../../docs/fondamenta/icone.html" aria-current="page">Icone</a></li></ul><p class="nav-group">Componenti</p><ul><li><a href="../../docs/componenti/bottone.html">Bottone</a></li><li><a href="../../docs/componenti/campo.html">Campo</a></li><li><a href="../../docs/componenti/scheda.html">Scheda</a></li><li><a href="../../docs/componenti/badge.html">Badge</a></li><li><a href="../../docs/componenti/filtro.html">Filtro</a></li><li><a href="../../docs/componenti/segnaposto.html">Segnaposto</a></li></ul></nav>
+  </details>
+  <main id="contenuto">
+    <nav class="crumbs" aria-label="Percorso"><ol>
+      <li><a href="../../index.html">Grigna</a></li>
+      <li><span aria-current="page"><span class="crumb-group">Fondamenti</span> - Icone</span></li>
+    </ol></nav>
+    
+    <article class="prose">
+<h1 id="icone">Icone</h1>
+<div class="demo" role="group" aria-label="Esempio dal vivo">
+<div class="demo-grid">
+<div class="swatch"><i data-lucide="search" aria-hidden="true" style="width: var(--grigna-size-icon-lg); height: var(--grigna-size-icon-lg)"></i><code class="demo-label">search</code></div>
+<div class="swatch"><i data-lucide="check" aria-hidden="true" style="width: var(--grigna-size-icon-lg); height: var(--grigna-size-icon-lg)"></i><code class="demo-label">check</code></div>
+<div class="swatch"><i data-lucide="x" aria-hidden="true" style="width: var(--grigna-size-icon-lg); height: var(--grigna-size-icon-lg)"></i><code class="demo-label">x</code></div>
+<div class="swatch"><i data-lucide="plus" aria-hidden="true" style="width: var(--grigna-size-icon-lg); height: var(--grigna-size-icon-lg)"></i><code class="demo-label">plus</code></div>
+<div class="swatch"><i data-lucide="info" aria-hidden="true" style="width: var(--grigna-size-icon-lg); height: var(--grigna-size-icon-lg)"></i><code class="demo-label">info</code></div>
+<div class="swatch"><i data-lucide="map-pin" aria-hidden="true" style="width: var(--grigna-size-icon-lg); height: var(--grigna-size-icon-lg)"></i><code class="demo-label">map-pin</code></div>
+<div class="swatch"><i data-lucide="route" aria-hidden="true" style="width: var(--grigna-size-icon-lg); height: var(--grigna-size-icon-lg)"></i><code class="demo-label">route</code></div>
+<div class="swatch"><i data-lucide="mountain" aria-hidden="true" style="width: var(--grigna-size-icon-lg); height: var(--grigna-size-icon-lg)"></i><code class="demo-label">mountain</code></div>
+</div>
+</div>
+<p>Grigna usa una sola libreria: <strong><a href="https://lucide.dev">Lucide</a></strong>, versione <strong>1.57.0</strong> (licenza ISC). Il tratto è sottile e arrotondato, coerente con il tono pulito e amichevole del sistema.</p>
+<h2 id="perché-una-sola-libreria">Perché una sola libreria</h2>
+<p>Icone di librerie diverse hanno spessori, angoli e proporzioni diversi: messe vicine, si vede subito. Se a Lucide manca un'icona, la si disegna nello stesso stile (griglia 24×24, tratto 2px, estremità arrotondate) e la si aggiunge a Grigna. Non si prende da un'altra libreria.</p>
+<h2 id="come-si-usa">Come si usa</h2>
+<p>Con il pacchetto UMD:</p>
+<pre data-lang="html"><code>&lt;script src=&quot;https://unpkg.com/lucide@1.57.0/dist/umd/lucide.min.js&quot;&gt;&lt;/script&gt;
+&lt;i data-lucide=&quot;mountain&quot;&gt;&lt;/i&gt;
+&lt;script&gt;lucide.createIcons();&lt;/script&gt;</code></pre>
+<p>Oppure si copia il file SVG da <code>lucide-static@1.57.0/icons/{nome}.svg</code>. In entrambi i casi l'icona prende il colore del testo (<code>currentColor</code>).</p>
+<p>Misure: <code>--grigna-size-icon-sm</code> (16px) dentro badge e filtri, <code>--grigna-size-icon-md</code> (20px) nei bottoni e accanto al testo, <code>--grigna-size-icon-lg</code> (24px) da sola. I componenti di Grigna dimensionano già le icone che contengono.</p>
+<h2 id="regole">Regole</h2>
+<ul><li><strong>Icona più testo, quasi sempre.</strong> Un'icona da sola si capisce solo se è universale (cerca, chiudi, menu). In quel caso il bottone ha un <code>aria-label</code>.</li><li><strong>Le icone decorative si nascondono</strong> agli screen reader con <code>aria-hidden=&quot;true&quot;</code>.</li><li><strong>Il colore dell'icona è quello del testo vicino.</strong> Non si colora un'icona per farla notare.</li><li><strong>Stesso concetto, stessa icona</strong> in tutto il prodotto.</li></ul>
+<h2 id="icone-disegnate-per-grigna">Icone disegnate per Grigna</h2>
+<p>Quando Lucide non ha un'icona, la si disegna nello stesso stile e la si salva in <code>icons/</code>, nella cartella del livello a cui appartiene: <code>icons/&lt;nome del livello&gt;/</code>. Le icone di un livello brand sono elencate nelle sue docs.</p>
+<p>Si usano copiando il contenuto del file SVG così com'è dentro la pagina, con <code>aria-hidden=&quot;true&quot;</code> sull'elemento <code>&lt;svg&gt;</code>. Prendono il colore del testo e i componenti di Grigna le dimensionano come le icone Lucide.</p>
+<pre data-lang="html"><code>&lt;span&gt;
+  &lt;svg aria-hidden=&quot;true&quot; …contenuto del file SVG…&gt;&lt;/svg&gt;Etichetta
+&lt;/span&gt;</code></pre>
+<p>Le regole di disegno: griglia 24×24, tratto 2px, estremità e angoli arrotondati, nessun riempimento, colore <code>currentColor</code>.</p>
+<hr>
+<h2 id="per-gli-agenti" class="agent">Per gli agenti</h2>
+<p><strong>Sempre</strong></p>
+<ul><li>Solo icone Lucide 1.57.0, con il nome esatto della libreria, oppure le icone disegnate in <code>icons/</code>.</li><li>Per i concetti di un livello brand usa la tabella delle icone nelle docs di quel livello.</li><li>Un'icona di Grigna si copia così com'è dal suo file, senza modificarne i tracciati.</li><li><code>aria-hidden=&quot;true&quot;</code> sulle icone accanto a un testo, <code>aria-label</code> sui bottoni con sola icona.</li></ul>
+<p><strong>Mai</strong></p>
+<ul><li>Mai icone da altre librerie (Material, Font Awesome, Heroicons…), mai emoji al posto delle icone.</li><li>Mai disegnare SVG a mano dentro una pagina: un'icona nuova si propone e si aggiunge a Grigna.</li><li>Mai usare le proposte in <code>archivio/</code>: sono solo la storia del processo.</li><li>Mai inventare nomi di icone: se non sei sicuro che un nome esista in Lucide 1.57.0, dillo.</li></ul>
+    </article>
+    <nav class="pager" aria-label="Pagine vicine"><a class="pager-prev" rel="prev" href="../../docs/fondamenta/spazi-e-forme.html"><span class="pager-dir"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>Precedente</span><span class="pager-label">Spazi, raggi ed elevazione</span></a><a class="pager-next" rel="next" href="../../docs/componenti/bottone.html"><span class="pager-dir">Successiva<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span><span class="pager-label">Bottone</span></a></nav>
+    <footer class="foot">
+      <p>Versione per agenti: <a href="icone.md">icone.md</a> · <a href="../../llms.txt">llms.txt</a> · <a href="../../dist/tokens.json">tokens.json</a></p>
+      <p>Grigna è un progetto di Loris Rigoni.</p>
+    </footer>
+  </main>
+</div>
+<script>
+  // Indice aperto su schermi larghi, chiuso su telefono
+  const nav = document.getElementById("nav");
+  const wide = matchMedia("(min-width: 768px)");
+  const syncNav = () => { nav.open = wide.matches; };
+  syncNav(); wide.addEventListener("change", syncNav);
+  // Altezza del header fisso, per l'indice e per i link interni
+  const topBar = document.querySelector(".top");
+  const syncTop = () => document.documentElement.style.setProperty("--top-h", topBar.offsetHeight + "px");
+  syncTop(); new ResizeObserver(syncTop).observe(topBar);
+  // Tema: sistema, oppure scelta ricordata in questo browser
+  const LABEL = { system: "sistema", light: "chiaro", dark: "scuro" };
+  let current = "system";
+  function setTheme(mode) {
+    current = mode;
+    document.getElementById("theme-cycle").textContent = "Tema: " + LABEL[mode];
+    if (mode === "system") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", mode);
+    document.querySelectorAll("[data-set]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.set === mode));
+    fillTokens();
+    try { localStorage.setItem("grigna-theme", mode); } catch (e) {}
+  }
+  // Esempi dal vivo: valori dei token per il tema attivo, filtri che si attivano e disattivano
+  function fillTokens() {
+    const css = getComputedStyle(document.documentElement);
+    document.querySelectorAll("[data-token]").forEach((el) => { el.textContent = css.getPropertyValue(el.dataset.token).trim(); });
+  }
+  document.querySelectorAll(".demo .grigna-chip").forEach((c) =>
+    c.addEventListener("click", () => c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") !== "true")));
+  document.querySelectorAll(".demo a[href='#']").forEach((a) => a.addEventListener("click", (ev) => ev.preventDefault()));
+  let saved = "system";
+  try { saved = localStorage.getItem("grigna-theme") || "system"; } catch (e) {}
+  document.querySelectorAll("[data-set]").forEach((b) => b.addEventListener("click", () => setTheme(b.dataset.set)));
+  document.getElementById("theme-cycle").addEventListener("click", () =>
+    setTheme({ system: "light", light: "dark", dark: "system" }[current]));
+  setTheme(saved);
+</script>
+<script src="https://unpkg.com/lucide@1.57.0/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

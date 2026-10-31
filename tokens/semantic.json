@@ -1,0 +1,47 @@
+{
+  "$description": "Grigna, livello 2: token semantici uguali in tema chiaro e scuro (tipografia, spazi, raggi, misure). I colori e le ombre stanno in themes/.",
+  "semantic": {
+    "type": {
+      "$type": "typography",
+      "display":    { "$value": { "fontFamily": "{primitive.font.family.sans}", "fontSize": "{primitive.font.size.36}", "fontWeight": "{primitive.font.weight.bold}",     "lineHeight": "{primitive.font.line-height.tight}", "letterSpacing": "-0.02em" }, "$description": "Titolo di pagina principale, uno per schermata" },
+      "heading-lg": { "$value": { "fontFamily": "{primitive.font.family.sans}", "fontSize": "{primitive.font.size.24}", "fontWeight": "{primitive.font.weight.bold}",     "lineHeight": "{primitive.font.line-height.tight}", "letterSpacing": "-0.01em" } },
+      "heading-md": { "$value": { "fontFamily": "{primitive.font.family.sans}", "fontSize": "{primitive.font.size.20}", "fontWeight": "{primitive.font.weight.semibold}", "lineHeight": "{primitive.font.line-height.snug}",  "letterSpacing": "0em" } },
+      "heading-sm": { "$value": { "fontFamily": "{primitive.font.family.sans}", "fontSize": "{primitive.font.size.18}", "fontWeight": "{primitive.font.weight.semibold}", "lineHeight": "{primitive.font.line-height.snug}",  "letterSpacing": "0em" } },
+      "body":       { "$value": { "fontFamily": "{primitive.font.family.sans}", "fontSize": "{primitive.font.size.16}", "fontWeight": "{primitive.font.weight.regular}",  "lineHeight": "{primitive.font.line-height.normal}", "letterSpacing": "0em" }, "$description": "Testo corrente. Mai sotto i 16px" },
+      "body-strong":{ "$value": { "fontFamily": "{primitive.font.family.sans}", "fontSize": "{primitive.font.size.16}", "fontWeight": "{primitive.font.weight.semibold}", "lineHeight": "{primitive.font.line-height.normal}", "letterSpacing": "0em" } },
+      "label":      { "$value": { "fontFamily": "{primitive.font.family.sans}", "fontSize": "{primitive.font.size.14}", "fontWeight": "{primitive.font.weight.medium}",   "lineHeight": "{primitive.font.line-height.snug}",  "letterSpacing": "0em" }, "$description": "Etichette di bottoni piccoli, chip, badge. Testi brevi, non paragrafi" },
+      "caption":    { "$value": { "fontFamily": "{primitive.font.family.sans}", "fontSize": "{primitive.font.size.14}", "fontWeight": "{primitive.font.weight.regular}",  "lineHeight": "{primitive.font.line-height.normal}", "letterSpacing": "0em" }, "$description": "Metadati brevi: date, fonti. Non per testi da leggere a lungo" },
+      "data":       { "$value": { "fontFamily": "{primitive.font.family.sans}", "fontSize": "{primitive.font.size.16}", "fontWeight": "{primitive.font.weight.semibold}", "lineHeight": "{primitive.font.line-height.snug}",  "letterSpacing": "0em" }, "$description": "Numeri e misure. Usa sempre cifre tabulari (font-variant-numeric: tabular-nums)" }
+    },
+    "space": {
+      "$type": "dimension",
+      "$description": "Scala di spazi su base 4px. Usa questi nomi, non valori liberi",
+      "2xs": { "$value": "{primitive.space.1}" },
+      "xs":  { "$value": "{primitive.space.2}" },
+      "sm":  { "$value": "{primitive.space.3}" },
+      "md":  { "$value": "{primitive.space.4}" },
+      "lg":  { "$value": "{primitive.space.6}" },
+      "xl":  { "$value": "{primitive.space.8}" },
+      "2xl": { "$value": "{primitive.space.12}" },
+      "3xl": { "$value": "{primitive.space.16}" }
+    },
+    "radius": {
+      "$type": "dimension",
+      "control": { "$value": "{primitive.radius.md}",   "$description": "Bottoni, campi" },
+      "card":    { "$value": "{primitive.radius.lg}",   "$description": "Schede, pannelli" },
+      "overlay": { "$value": "{primitive.radius.xl}",   "$description": "Finestre di dialogo, fogli dal basso" },
+      "pill":    { "$value": "{primitive.radius.pill}", "$description": "Chip, badge, filtri" }
+    },
+    "size": {
+      "$type": "dimension",
+      "touch-target": { "$value": "44px", "$description": "Area minima di tocco di ogni elemento interattivo" },
+      "text-min":     { "$value": "{primitive.font.size.16}", "$description": "Dimensione minima del testo corrente" },
+      "icon-sm":      { "$value": "16px" },
+      "icon-md":      { "$value": "20px" },
+      "icon-lg":      { "$value": "24px" },
+      "focus-ring":   { "$value": "2px" },
+      "page-max":     { "$value": "1200px", "$description": "Larghezza massima del contenuto della pagina" },
+      "card-min":     { "$value": "280px", "$description": "Larghezza minima di una scheda in una griglia: minmax(min(100%, var(--grigna-size-card-min)), 1fr)" }
+    }
+  }
+}
