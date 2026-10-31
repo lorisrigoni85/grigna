@@ -4,7 +4,9 @@ Sei idee guidano Grigna. Quando una regola più specifica non copre un caso, si 
 
 ## 1. Il sistema è il contesto
 
-Un design system ben strutturato è il miglior contesto che un agente possa avere. Per questo ogni scelta è scritta, ha un nome ed è verificabile da uno script, non solo da un occhio esperto. Se una regola non si può controllare, va riscritta finché si può.
+Un design system serve prima di tutto a chi progetta: dà a designer e sviluppatori le stesse regole, gli stessi nomi e gli stessi componenti. Grigna aggiunge un secondo lettore, l'agente AI. Le regole che rendono coerente il lavoro di un team sono le stesse che impediscono a un agente di inventare colori, spazi e componenti.
+
+Per questo ogni scelta è scritta, ha un nome ed è verificabile da uno script, non solo da un occhio esperto. Se una regola non si può controllare, va riscritta finché si può.
 
 ## 2. Pulito e luminoso
 

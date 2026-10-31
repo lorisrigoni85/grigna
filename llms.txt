@@ -20,6 +20,7 @@ Prima di costruire un'interfaccia con Grigna leggi AGENTS.md. Tutti i token riso
 - [Scheda](docs/componenti/scheda.md)
 - [Badge](docs/componenti/badge.md)
 - [Filtro](docs/componenti/filtro.md)
+- [Accordion](docs/componenti/accordion.md)
 - [Segnaposto](docs/componenti/segnaposto.md)
 
 ## Dati

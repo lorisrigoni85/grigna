@@ -68,6 +68,21 @@
       "danger":  { "$type": "color", "bg": { "$value": "{semantic.color.feedback.danger.bg}" },  "text": { "$value": "{semantic.color.feedback.danger.text}" } },
       "info":    { "$type": "color", "bg": { "$value": "{semantic.color.feedback.info.bg}" },    "text": { "$value": "{semantic.color.feedback.info.text}" } }
     },
+    "accordion": {
+      "$description": "Sezioni che si aprono e si chiudono. Costruito su <details> e <summary>",
+      "bg":           { "$type": "color", "$value": "{semantic.color.surface.raised}" },
+      "bg-hover":     { "$type": "color", "$value": "{semantic.color.surface.subtle}" },
+      "border":       { "$type": "color", "$value": "{semantic.color.border.default}" },
+      "icon":         { "$type": "color", "$value": "{semantic.color.text.muted}" },
+      "text":         { "$type": "color", "$value": "{semantic.color.text.default}" },
+      "radius":       { "$type": "dimension", "$value": "{semantic.radius.card}" },
+      "min-height":   { "$type": "dimension", "$value": "{semantic.size.touch-target}" },
+      "padding-x":    { "$type": "dimension", "$value": "{semantic.space.md}" },
+      "padding-y":    { "$type": "dimension", "$value": "{semantic.space.sm}" },
+      "gap":          { "$type": "dimension", "$value": "{semantic.space.sm}" },
+      "summary-font": { "$type": "typography", "$value": "{semantic.type.body-strong}" },
+      "content-font": { "$type": "typography", "$value": "{semantic.type.body}" }
+    },
     "placeholder": {
       "$description": "Segnaposto per un dato che non c'è ancora, nei prototipi e negli esempi. Con dati veri un dato mancante non si mostra",
       "bg":     { "$type": "color", "$value": "{semantic.color.border.default}" },

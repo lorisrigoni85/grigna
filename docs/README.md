@@ -24,6 +24,7 @@ Le regole generali per gli agenti stanno in [`AGENTS.md`](../AGENTS.md), nella r
 - [Scheda](componenti/scheda.md)
 - [Badge](componenti/badge.md)
 - [Filtro](componenti/filtro.md)
+- [Accordion](componenti/accordion.md)
 - [Segnaposto](componenti/segnaposto.md)
 
 **Livelli brand**

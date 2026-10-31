@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accordion · Grigna</title>
+<meta name="description" content="Grigna, design system di Loris Rigoni, Senior Product Designer, pensato per persone e agenti AI.">
+<link rel="alternate" type="text/markdown" href="accordion.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../dist/grigna.css">
+<link rel="stylesheet" href="../../dist/grigna-components.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="top">
+  <a class="brand" href="../../index.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><span class="brand-text"><span class="brand-name">Grigna</span><span class="brand-claim">Design System</span></span></a>
+  <div class="top-actions">
+    <div class="theme" role="group" aria-label="Tema">
+      <button class="grigna-chip" data-set="light">Chiaro</button>
+      <button class="grigna-chip" data-set="dark">Scuro</button>
+      <button class="grigna-chip" data-set="system">Sistema</button>
+    </div>
+    <button class="grigna-chip theme-cycle" id="theme-cycle" aria-label="Cambia tema">Tema: sistema</button>
+  </div>
+</header>
+<div class="layout">
+  <details class="nav" id="nav">
+    <summary><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Indice</summary>
+    <nav aria-label="Indice"><p class="nav-group">Inizia</p><ul><li><a href="../../index.html">Home</a></li><li><a href="../../docs/principi.html">Principi</a></li><li><a href="../../AGENTS.html">Regole per gli agenti</a></li></ul><p class="nav-group">Fondamenti</p><ul><li><a href="../../docs/fondamenta/colore.html">Colore</a></li><li><a href="../../docs/fondamenta/tipografia.html">Tipografia</a></li><li><a href="../../docs/fondamenta/spazi-e-forme.html">Spazi, raggi ed elevazione</a></li><li><a href="../../docs/fondamenta/icone.html">Icone</a></li></ul><p class="nav-group">Componenti</p><ul><li><a href="../../docs/componenti/bottone.html">Bottone</a></li><li><a href="../../docs/componenti/campo.html">Campo</a></li><li><a href="../../docs/componenti/scheda.html">Scheda</a></li><li><a href="../../docs/componenti/badge.html">Badge</a></li><li><a href="../../docs/componenti/filtro.html">Filtro</a></li><li><a href="../../docs/componenti/accordion.html" aria-current="page">Accordion</a></li><li><a href="../../docs/componenti/segnaposto.html">Segnaposto</a></li></ul></nav>
+  </details>
+  <main id="contenuto">
+    <nav class="crumbs" aria-label="Percorso"><ol>
+      <li><a href="../../index.html">Grigna</a></li>
+      <li><span aria-current="page"><span class="crumb-group">Componenti</span> - Accordion</span></li>
+    </ol></nav>
+    
+    <article class="prose">
+<h1 id="accordion">Accordion</h1>
+<div class="demo" role="group" aria-label="Esempio dal vivo">
+<div class="grigna-accordion" style="width: 100%">
+  <details class="grigna-accordion__item" name="demo-grigna" open>
+    <summary class="grigna-accordion__summary">Cos'è Grigna?</summary>
+    <div class="grigna-accordion__content"><p>Un design system pensato per persone e agenti AI: token, componenti e linee guida scritte per due lettori.</p></div>
+  </details>
+  <details class="grigna-accordion__item" name="demo-grigna">
+    <summary class="grigna-accordion__summary">Quali icone usa?</summary>
+    <div class="grigna-accordion__content"><p>Lucide 1.57.0, una sola libreria per tutto il sistema.</p></div>
+  </details>
+  <details class="grigna-accordion__item" name="demo-grigna">
+    <summary class="grigna-accordion__summary">Si può usare in altri progetti?</summary>
+    <div class="grigna-accordion__content"><p>Per ora no: è un progetto personale e un caso studio.</p></div>
+  </details>
+</div>
+</div>
+<h2 id="cosè">Cos'è</h2>
+<p>Una lista di sezioni con un titolo sempre visibile e un contenuto che si apre e si chiude cliccando sul titolo.</p>
+<h2 id="quando-usarlo">Quando usarlo</h2>
+<ul><li>Domande frequenti, dettagli tecnici, informazioni secondarie che non devono occupare spazio.</li><li>Quando chi legge cerca una sola risposta tra tante, e le altre possono restare chiuse.</li></ul>
+<h2 id="quando-non-usarlo">Quando non usarlo</h2>
+<ul><li>Per informazioni importanti che tutti devono leggere: nasconderle non le rende più semplici, le rende invisibili.</li><li>Per passi in sequenza, come una procedura: lì serve una struttura che mostri l'ordine.</li><li>Un accordion dentro un altro accordion: mai.</li><li>Con una sola sezione: basta il testo, o un link &quot;mostra di più&quot;.</li></ul>
+<h2 id="codice">Codice</h2>
+<pre data-lang="html"><code>&lt;div class=&quot;grigna-accordion&quot;&gt;
+  &lt;details class=&quot;grigna-accordion__item&quot;&gt;
+    &lt;summary class=&quot;grigna-accordion__summary&quot;&gt;Titolo della sezione&lt;/summary&gt;
+    &lt;div class=&quot;grigna-accordion__content&quot;&gt;
+      &lt;p&gt;Contenuto della sezione.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/details&gt;
+  &lt;details class=&quot;grigna-accordion__item&quot;&gt;
+    &lt;summary class=&quot;grigna-accordion__summary&quot;&gt;Altra sezione&lt;/summary&gt;
+    &lt;div class=&quot;grigna-accordion__content&quot;&gt;
+      &lt;p&gt;Altro contenuto.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</code></pre>
+<p>Non serve JavaScript: apertura e chiusura le gestisce il browser.</p>
+<h2 id="varianti-e-stati">Varianti e stati</h2>
+<div class="table"><table><thead><tr><th>Come</th><th>Risultato</th></tr></thead><tbody><tr><td><em>(nessun attributo)</em></td><td>Si possono aprire più sezioni insieme. È il comportamento di default</td></tr><tr><td>Stesso <code>name=&quot;…&quot;</code> su tutti i <code>&lt;details&gt;</code> del gruppo</td><td>Una sola sezione aperta alla volta: aprendone una, le altre si chiudono</td></tr><tr><td><code>open</code> su un <code>&lt;details&gt;</code></td><td>Quella sezione è aperta quando la pagina si carica</td></tr><tr><td>Hover, focus</td><td>Superficie tenue al passaggio del mouse, anello Abete da tastiera</td></tr></tbody></table></div>
+<p>La freccia a destra la disegna il CSS: punta in giù da chiuso e in su da aperto.</p>
+<h2 id="testi">Testi</h2>
+<ul><li><strong>Titolo</strong>: dice cosa c'è dentro, in poche parole. Una domanda funziona bene per le FAQ (&quot;Quali icone usa?&quot;).</li><li><strong>Contenuto</strong>: breve. Se un contenuto è lungo, forse merita una pagina sua.</li></ul>
+<h2 id="token">Token</h2>
+<p><code>--grigna-accordion-bg</code>, <code>-bg-hover</code>, <code>-border</code>, <code>-icon</code>, <code>-text</code>, <code>-radius</code>, <code>-min-height</code>, <code>-padding-x</code>, <code>-padding-y</code>, <code>-gap</code>, <code>-summary-font</code>, <code>-content-font</code> (tutti con prefisso <code>--grigna-accordion</code>).</p>
+<h2 id="accessibilità">Accessibilità</h2>
+<ul><li><code>&lt;details&gt;</code> e <code>&lt;summary&gt;</code> sono nativi: tastiera (Invio e Spazio), stato &quot;aperto/chiuso&quot; letto dallo screen reader e ricerca nella pagina anche dentro le sezioni chiuse funzionano senza codice in più.</li><li>Area cliccabile del titolo alta almeno 44px.</li><li>Il titolo è testo semplice: niente link o bottoni dentro <code>&lt;summary&gt;</code>.</li></ul>
+<hr>
+<h2 id="per-gli-agenti" class="agent">Per gli agenti</h2>
+<p><strong>Sempre</strong></p>
+<ul><li>Struttura completa: <code>grigna-accordion</code> &gt; <code>details.grigna-accordion__item</code> &gt; <code>summary.grigna-accordion__summary</code> + <code>div.grigna-accordion__content</code>.</li><li>Per &quot;una sola aperta alla volta&quot; usa l'attributo <code>name</code>, uguale su tutto il gruppo.</li></ul>
+<p><strong>Mai</strong></p>
+<ul><li>Mai ricostruire l'accordion con <code>&lt;div&gt;</code> e JavaScript: usa <code>&lt;details&gt;</code> e <code>&lt;summary&gt;</code>.</li><li>Mai link, bottoni o altri controlli dentro <code>&lt;summary&gt;</code>.</li><li>Mai accordion annidati, mai un accordion con una sola sezione.</li><li>Mai nascondere in un accordion informazioni che tutti devono leggere.</li></ul>
+    </article>
+    <nav class="pager" aria-label="Pagine vicine"><a class="pager-prev" rel="prev" href="../../docs/componenti/filtro.html"><span class="pager-dir"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>Precedente</span><span class="pager-label">Filtro</span></a><a class="pager-next" rel="next" href="../../docs/componenti/segnaposto.html"><span class="pager-dir">Successiva<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span><span class="pager-label">Segnaposto</span></a></nav>
+    <footer class="foot">
+      <p>Versione per agenti: <a href="accordion.md">accordion.md</a> · <a href="../../llms.txt">llms.txt</a> · <a href="../../dist/tokens.json">tokens.json</a></p>
+      <p>Grigna è un progetto di <a href="https://miracledesign.it" target="_blank" rel="noopener">Loris Rigoni</a>, Senior Product Designer. © 2026, tutti i diritti riservati: <a href="../../LICENSE.txt">condizioni d'uso</a>.</p>
+    </footer>
+  </main>
+</div>
+<script>
+  // Indice aperto su schermi larghi, chiuso su telefono
+  const nav = document.getElementById("nav");
+  const wide = matchMedia("(min-width: 768px)");
+  const syncNav = () => { nav.open = wide.matches; };
+  syncNav(); wide.addEventListener("change", syncNav);
+  // Altezza del header fisso, per l'indice e per i link interni
+  const topBar = document.querySelector(".top");
+  const syncTop = () => document.documentElement.style.setProperty("--top-h", topBar.offsetHeight + "px");
+  syncTop(); new ResizeObserver(syncTop).observe(topBar);
+  // Tema: sistema, oppure scelta ricordata in questo browser
+  const LABEL = { system: "sistema", light: "chiaro", dark: "scuro" };
+  let current = "system";
+  function setTheme(mode) {
+    current = mode;
+    document.getElementById("theme-cycle").textContent = "Tema: " + LABEL[mode];
+    if (mode === "system") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", mode);
+    document.querySelectorAll("[data-set]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.set === mode));
+    fillTokens();
+    try { localStorage.setItem("grigna-theme", mode); } catch (e) {}
+  }
+  // Esempi dal vivo: valori dei token per il tema attivo, filtri che si attivano e disattivano
+  function fillTokens() {
+    const css = getComputedStyle(document.documentElement);
+    document.querySelectorAll("[data-token]").forEach((el) => { el.textContent = css.getPropertyValue(el.dataset.token).trim(); });
+  }
+  document.querySelectorAll(".demo .grigna-chip").forEach((c) =>
+    c.addEventListener("click", () => c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") !== "true")));
+  document.querySelectorAll(".demo a[href='#']").forEach((a) => a.addEventListener("click", (ev) => ev.preventDefault()));
+  let saved = "system";
+  try { saved = localStorage.getItem("grigna-theme") || "system"; } catch (e) {}
+  document.querySelectorAll("[data-set]").forEach((b) => b.addEventListener("click", () => setTheme(b.dataset.set)));
+  document.getElementById("theme-cycle").addEventListener("click", () =>
+    setTheme({ system: "light", light: "dark", dark: "system" }[current]));
+  setTheme(saved);
+</script>
+<script src="https://unpkg.com/lucide@1.57.0/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

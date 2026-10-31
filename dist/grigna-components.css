@@ -24,6 +24,67 @@
   }
 }
 
+/* Grigna · accordion
+   <div class="grigna-accordion">
+     <details class="grigna-accordion__item">
+       <summary class="grigna-accordion__summary">Titolo della sezione</summary>
+       <div class="grigna-accordion__content"><p>Contenuto.</p></div>
+     </details>
+   </div>
+   Costruito su <details> e <summary>: si apre e si chiude senza JavaScript, da mouse e tastiera.
+   Una sola sezione aperta alla volta: lo stesso attributo name su tutti i <details> del gruppo.
+   Aperto all'inizio: attributo open. */
+
+.grigna-accordion {
+  border: 1px solid var(--grigna-accordion-border);
+  border-radius: var(--grigna-accordion-radius);
+  background: var(--grigna-accordion-bg);
+  color: var(--grigna-accordion-text);
+  overflow: hidden;
+}
+
+.grigna-accordion__item + .grigna-accordion__item {
+  border-top: 1px solid var(--grigna-accordion-border);
+}
+
+.grigna-accordion__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--grigna-accordion-gap);
+  min-height: var(--grigna-accordion-min-height);
+  padding: var(--grigna-accordion-padding-y) var(--grigna-accordion-padding-x);
+  font: var(--grigna-accordion-summary-font);
+  list-style: none;
+  cursor: pointer;
+  transition: background-color 120ms ease-out;
+}
+.grigna-accordion__summary::-webkit-details-marker { display: none; }
+.grigna-accordion__summary:hover { background: var(--grigna-accordion-bg-hover); }
+
+/* Il focus resta dentro il contenitore, che ha overflow: hidden */
+.grigna-accordion__summary:focus-visible { outline-offset: calc(-1 * var(--grigna-size-focus-ring)); }
+
+/* Freccia disegnata dal CSS: punta in giù da chiuso, in su da aperto */
+.grigna-accordion__summary::after {
+  content: "";
+  width: var(--grigna-size-icon-sm);
+  height: var(--grigna-size-icon-sm);
+  flex: none;
+  background: var(--grigna-accordion-icon);
+  clip-path: polygon(12% 32%, 24% 20%, 50% 46%, 76% 20%, 88% 32%, 50% 70%);
+  transition: transform 160ms ease-out;
+}
+.grigna-accordion__item[open] > .grigna-accordion__summary::after { transform: rotate(180deg); }
+
+/* Spazio sopra il testo, per staccarlo dal titolo quando la sezione è aperta */
+.grigna-accordion__content {
+  padding: var(--grigna-accordion-padding-y) var(--grigna-accordion-padding-x) var(--grigna-accordion-padding-x);
+  font: var(--grigna-accordion-content-font);
+}
+.grigna-accordion__content > * { margin: 0; }
+.grigna-accordion__content > * + * { margin-top: var(--grigna-space-xs); }
+
 /* Grigna · badge
    <span class="grigna-badge grigna-badge--success">Pubblicata</span>
    Etichetta che non si clicca. Varianti: --neutral (default), --accent, --success, --warning, --danger, --info.

@@ -34,6 +34,7 @@ Il tema segue il sistema operativo. Si forza con `data-theme="dark"` o `data-the
 | Un oggetto in una lista | `grigna-card` ([docs](docs/componenti/scheda.md)) | Schede annidate, più link in una scheda cliccabile |
 | Uno stato o un'etichetta | `grigna-badge` ([docs](docs/componenti/badge.md)) | Badge cliccabili o senza testo |
 | Un filtro on/off | `grigna-chip` con `aria-pressed` ([docs](docs/componenti/filtro.md)) | Classi `--active`/`--selected` |
+| Sezioni che si aprono e si chiudono | `grigna-accordion` su `<details>` ([docs](docs/componenti/accordion.md)) | `<div>` con JavaScript, accordion annidati |
 | Un dato di esempio in un prototipo | `grigna-placeholder` ([docs](docs/componenti/segnaposto.md)) | Numeri inventati, graffe `{…}` a schermo |
 | Un colore | `var(--grigna-color-*)` ([docs](docs/fondamenta/colore.md)) | `#hex`, `rgb()`, `hsl()`, nomi di colore |
 | Un carattere | `font: var(--grigna-type-*)` ([docs](docs/fondamenta/tipografia.md)) | `font-size`/`font-weight` a mano, altri font |
